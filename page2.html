@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="overflow-x-hidden w-screen">
+    <div class="fixed top-0 right-4 text-xs flex items-center md:text-lg space-x-4">
+        <a href="#" class="hover:underline text-black hidden md:block" style="color: white;">Home</a>
+        <a href="./page2.html" class="hover:underline text-black hidden md:block" style="color: white;">Tours</a>
+        <a href="#" class="hover:underline text-black hidden md:block" style="color: white;">Travel Styles</a>
+        <a href="#" class="hover:underline text-black hidden md:block" style="color: white;">About us</a>
+        <!-- Added tag with "Culture Holidays" -->
+        <div class="fixed top-0 left-4  text-xs flex items-end md:text-lg space-x-4">
+            <a href="#" class="hover:underline text-black hidden md:block text-2xl" style="color: white;">Culture
+                Holidays</a>
+        </div>
+
+
+        <style>
+            .zoom-effect {
+                transition: transform 0.3s ease;
+            }
+
+            .zoom-effect:hover {
+                transform: scale(1.1);
+            }
+        </style>
+
+        <a href="#" class=" text-black bg-white border-black border-2 px-1 zoom-effect">Sign in</a>
+
+
+
+    </div>
+
+
+    <img src="images/bg.jpg" class="h-[470px] w-[1550px] object-cover" alt="">
+
+    <div class="bg-gray-200 py-2 px-2 sticky top-0 flex" style="z-index: 100; justify-content: space-evenly;">
+        <div>
+            <div class="flex justify-start hover:bg-gray-200 transition duration-300 ease-in-out px-15">
+                <div class="flex justify-start">
+                    <h1
+                        class="cursor-pointer text-left text-uppercase text-gray-500 text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-bold pl-5 hover:text-gray-700">
+                        Refine your Search
+                    </h1>
+                </div>
+                <div class="flex justify-start px-15">
+                    <h1
+                        class="cursor-pointer text-left text-uppercase text-pink-600 text-sm md:text-lg lg:text-xs xl:text-lg xl:text-3xl font-bold pl-5 hover:text-pink-700">
+                        Reset Filters
+                    </h1>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-4 justify-start ml-4">
+                <div class="flex header cursor-pointer search-bar ">
+                    <div class="cursor-pointer hover:bg-gray-200 relative p-2 border border-gray-300 rounded-lg flex-grow bg-white"
+                        style="width: 10vw;">
+                        <span class="mr-1">Include locations</span>
+                        <img src="images/hide arrow.jpg" alt="Hide Additional Details"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 h-3 w-3 opacity-50 ml-4">
+                    </div>
+
+                    <div class="relative">
+                        <div class="cursor-pointer bg-gray-600 p-2 border border-gray-300 rounded-lg flex-grow bg-white"
+                            style="width: 10vw;">
+                            <span class="mr-1">Travel Month</span>
+                            <img src="images/hide arrow.jpg" alt="Hide Additional Details"
+                                class="absolute top-1/2 right-2 transform -translate-y-1/2 h-3 w-3 opacity-50 ml-6">
+                        </div>
+
+                    </div>
+
+
+                    <div class="cursor-pointer hover:bg-gray-200 relative p-2 border border-gray-300 rounded-lg flex-grow bg-white"
+                        style="width: 10vw;">
+                        <span class="mr-1">Travel Budget</span>
+                        <img src="images/hide arrow.jpg" alt="Hide Additional Details"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 h-3 w-3 opacity-50 ml-4">
+                    </div>
+                    <div class="cursor-pointer hover:bg-gray-200 relative p-2 border border-gray-300 rounded-lg flex-grow bg-white"
+                        style="width: 10vw;">
+                        <span class="mr-1 w-3/12">Hotel Rating</span>
+                        <img src="images/hide arrow.jpg" alt="Hide Additional Details"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 h-3 w-3 opacity-50 ml-4">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center relative">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <div class="bg-white-500 p-1 rounded-full ml-4">
+                    <img src="images/search.jpg" alt="search" class="w-8 h-8">
+                </div>
+            </div>
+            <input type="text" id="myInput" placeholder="Search Here ." onkeyup="searchFun()"
+                class="cursor-pointer w-full md:w-64 p-2 pr-10 border border-pink-500 bg-white-300 text-gray-800 rounded text-xl"
+                style="::placeholder { font-size: 2px; }"> <!-- Decreased the font size to 12px -->
+
+        </div>
+
+
+    </div>
+
+
+    <div id="mainforall"
+        style="flex: auto; transition: background-color 0.3s ease; padding: 0 8vw; margin-top: 10vh; margin-left: 4vh;"
+        class=" relative">
+        <div class="top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class=" cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp1.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+
+
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md overflow-hidden ml-5 relative mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative rounded-tl-xl rounded-bl-lg">
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+                            <!-- Adjusted positioning -->
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details -->
+                    <div class="mt-2">
+                        <div class="flex  mt-[+10px] ">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex justify-center items-center border-dotted border border-black rounded-lg"
+                                    style="width: 120px; height: 40px; margin: 5px 10px;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="w-2/12 flex items-center p-2 rounded-lg mr-2 ml-15 hover:scale-110 transition-transform">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <!-- Adjust the width and height as needed -->
+                                <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">Top selling</p>
+                            </div>
+                            <div
+                                class="w-3/12  p-2 rounded-lg hover:scale-110 transition-transform ml-15 flex items-center">
+                                <img src="images/lightning.png" alt="" class="w-4 h-4 mr-1">
+                                <p class="text-xs font-semibold cursor-pointer text-blue-600 whitespace-nowrap">
+                                    Additional Offers for you</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-[-]"> <!-- Apply negative margin-top here -->
+                        <div class="my-div pl-4">
+                            <p class="city font-bold cursor-pointer">4 Cities: <span
+                                    class="text-pink-500 font-extrabold">2N</span> Delhi</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Jaipur</p>
+                        </div>
+                    </div>
+
+                    <!-- Trip Overview -->
+                    <div class="px-4 mt-[+10px]"> <!-- Apply negative margin-top here -->
+                        <h2 class="text-sm font-bold text-gray-700">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4"> <!-- Apply margin-top to move the p tag downwards -->
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+                    
+
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-25">
+                        <div class="  px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="  px-15 py-15">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+                                    </button>
+
+                                    <div class="bg-pink-700 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-20px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white;">
+                                        <h3 class="text-sm font-bold">60% OFF</h3>
+                                    </div>
+
+
+
+                                    <!-- Grey box with "Starting from $1200 per person" text -->
+                                    <div class=" text-white px-4 py-2 rounded-lg mt-2 text-2xl">
+                                        <p class="text-xs whitespace-nowrap">Price Starting from</p>
+                                        <p class="text-4xl">$1200</p>
+                                        <p class="text-xs">per person</p>
+                                    </div>
+                                    <div class="text-white px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white-600 mt-0 whitespace-nowrap">. Deposit only $200</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class=" cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp2.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md  overflow-hidden ml-5 relative  mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative"> <!-- Added relative positioning -->
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+
+                            <div class=" p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details -->
+                    <div class="mt-2">
+                        <div class="flex mt-[+10px]">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex justify-center items-center border-dotted border border-black rounded-lg "
+                                    style="width: 120px; height: 40px; margin: 5px 10px; background-color: #4D6C6D;
+                                    ;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div
+                                class="w-2/12 flex items-center p-2 rounded-lg mr-2 ml-15 hover:scale-110 transition-transform">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <!-- Adjust the width and height as needed -->
+                                <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">Top selling</p>
+                            </div>
+                            <div class="w-3/12 h-8 p-4 rounded-lg hover:scale-110 transition-transform ml-15 mt-3">
+                                <p class="text-xs font-semibold cursor-pointer text-pink-600 whitespace-nowrap">Hurry
+                                    Only a few seats left!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-[+10px]"> <!-- Apply negative margin-top here -->
+                        <div class="my-div pl-4">
+                            <p class="city font-bold cursor-pointer">4 Cities: <span
+                                    class="text-pink-500 font-extrabold">2N</span> Delhi</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Jaipur</p>
+                        </div>
+                    </div>
+
+                    <!-- Trip Overview -->
+                    <div class="px-4 mt-[+10px]"> <!-- Apply negative margin-top here -->
+                        <h2 class="text-sm font-bold text-gray-700">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4"> <!-- Apply margin-top to move the p tag downwards -->
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+                    
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-30 ">
+                        <div class="px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="px-15 py-15 ">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+
+                                    <div class="bg-pink-500 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-40px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white; ">
+                                        <h3 class="text-xs font-bold">60% OFF</h3>
+                                    </div>
+
+                                    <div class="text-white px-4 py-2 rounded-lg mt-2 text-2xl mt-[-px]"
+                                        style="margin-left: 2vw;">
+                                        <p class="text-xs whitespace-nowrap ml-auto">Price Starting from</p>
+                                        <p class="text-4xl ml-auto">$1200</p>
+                                        <p class="text-sm ml-auto">per person</p>
+                                    </div>
+
+                                    <!-- <div class="text-white-500 px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white mt-0">. Flexible payment option</p>
+                                        <p
+                                            class="text-xs font-bold text-pink-600 px-2 py-1 bg-white rounded-full whitespace-nowrap">
+                                            you are saving $200 on this tour
+                                        </p>
+
+                                    </div> -->
+
+
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                            <!-- White box for hover effect -->
+                            <div
+                                class="absolute inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                            </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class="rounded-2xl cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp3.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md  overflow-hidden ml-5 relative mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative"> <!-- Added relative positioning -->
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+                            <!-- Adjusted positioning -->
+                            <!-- Background div with gray color -->
+                            <div class="p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details -->
+                    <div class="mt-2">
+                        <div class="flex mt-[+10px]">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex justify-center items-center border-dotted border border-black rounded-lg"
+                                    style="width: 120px; height: 40px; margin: 5px 10px;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div
+                                class="w-2/12 flex items-center p-2 rounded-lg mr-2 ml-15 hover:scale-110 transition-transform">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <!-- Adjust the width and height as needed -->
+                                <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">Top selling</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-[+10px]"> <!-- Apply negative margin-top here -->
+                        <div class="my-div pl-4">
+                            <p class="city font-bold cursor-pointer">4 Cities: <span
+                                    class="text-pink-500 font-extrabold">2N</span> Delhi</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                        </div>
+                        <div class="my-div pl-2">
+                            <p class="city font-bold cursor-pointer"><span
+                                    class="text-pink-500 font-extrabold">1N</span> Jaipur</p>
+                        </div>
+                    </div>
+
+                    <!-- Trip Overview -->
+                    <div class="px-4 mt-[+10px]"> <!-- Apply negative margin-top here -->
+                        <h2 class="text-sm font-bold text-gray-700">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-25">
+                        <div class=" px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="  px-15 py-15">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+                                    </button>
+
+                                    <div class="bg-pink-500 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-20px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white;">
+                                        <h3 class="text-xs font-bold">60% OFF</h3>
+                                    </div>
+
+
+
+                                    <!-- Grey box with "Starting from $1200 per person" text -->
+                                    <div class=" text-white px-4 py-2 rounded-lg mt-2 text-2xl">
+                                        <p class="text-xs whitespace-nowrap">Price Starting from</p>
+                                        <p class="text-4xl">$1200</p>
+                                        <p class="text-xs">per person</p>
+                                    </div>
+                                    <div class="text-white px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white-600 mt-0 whitespace-nowrap">. Deposit only $200</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class="rounded-2xl cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp4.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md  overflow-hidden ml-5 relative mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative"> <!-- Added relative positioning -->
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+                            <!-- Adjusted positioning -->
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details -->
+                    <div class="mt-2">
+                        <div class="flex mt-[+10px]">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex justify-center items-center border-dotted border border-black rounded-lg"
+                                    style="width: 120px; height: 40px; margin: 5px 10px;background-color: #4D6C6D;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div
+                                class="w-2/12 flex items-center p-2 rounded-lg mr-2 ml-15 hover:scale-110 transition-transform">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <!-- Adjust the width and height as needed -->
+                                <p class="text-xs font-semibold cursor-pointer">Top selling</p>
+                            </div>
+                            <div class="w-3/12 h-8 p-2 rounded-lg hover:scale-110 transition-transform ml-15 mt-5">
+                                <p class="text-xs font-semibold cursor-pointer text-pink-600 whitespace-nowrap">Hurry
+                                    Only a few seats
+                                    left!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 mt-[+10px]">
+                            <div class="my-div pl-4">
+                                <p class="city font-bold cursor-pointer">4 Cities: <span
+                                        class="text-pink-500 font-extrabold">2N</span>
+                                    Delhi</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold cursor-pointer"><span
+                                        class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold cursor-pointer"><span
+                                        class="text-pink-500 font-extrabold">1N</span> Jaipur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trip Overview -->
+                    <div class="px-4  mt-[+10px]">
+                        <h2 class="text-sm font-bold text-gray-700 mt-4">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-25">
+                        <div class="  px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="  px-15 py-15">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+                                    </button>
+
+                                    <div class="bg-pink-500 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-20px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white;">
+                                        <h3 class="text-xs font-bold">60% OFF</h3>
+                                    </div>
+
+
+
+                                    <!-- Grey box with "Starting from $1200 per person" text -->
+                                    <div class=" text-white px-4 py-2 rounded-lg mt-2 text-2xl">
+                                        <p class="text-xs whitespace-nowrap">Price Starting from</p>
+                                        <p class="text-4xl">$1200</p>
+                                        <p class="text-xs">per person</p>
+                                    </div>
+                                    <div class="text-white px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white-600 mt-0 whitespace-nowrap">. Deposit only $200</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class="rounded-2xl cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp3.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md  overflow-hidden ml-5 relative mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative"> <!-- Added relative positioning -->
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+                            <!-- Adjusted positioning -->
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer Details -->
+                    <div class="mt-2">
+                        <div class="flex mt-[+10px]">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex justify-center items-center border-dotted border border-black rounded-lg"
+                                    style="width: 120px; height: 40px; margin: 5px 10px;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div
+                                class="w-3/12 p-3 rounded-2xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center ">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <p class="text-xs font-semibold cursor-pointer">Top selling
+
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="flex space-x-4 mt-[+10px]">
+                            <div class="my-div pl-4">
+                                <p class="city font-bold">4 Cities: <span class="text-pink-500 font-extrabold">2N</span>
+                                    Delhi</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold"><span class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold"><span class="text-pink-500 font-extrabold">1N</span> Jaipur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trip Overview -->
+                    <div class="px-4  mt-[+10px]">
+                        <h2 class="text-sm font-bold text-gray-700">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-25">
+                        <div class="  px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="  px-15 py-15">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+                                    </button>
+
+                                    <div class="bg-pink-500 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-20px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white;">
+                                        <h3 class="text-xs font-bold">60% OFF</h3>
+                                    </div>
+
+
+
+                                    <!-- Grey box with "Starting from $1200 per person" text -->
+                                    <div class=" text-white px-4 py-2 rounded-lg mt-2 text-2xl">
+                                        <p class="text-xs whitespace-nowrap">Price Starting from</p>
+                                        <p class="text-4xl">$1200</p>
+                                        <p class="text-xs">per person</p>
+                                    </div>
+                                    <div class="text-white px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white-600 mt-0 whitespace-nowrap">. Deposit only $200</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-15 relative"
+            style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 2vh;">
+            <div class="rounded-2xl cursor-pointer relative">
+                <div class="mb-3">
+                    <img src="images/sp4.jpeg" class="w-80 h-64 rounded-lg" style="object-fit: cover;">
+                </div>
+                <div class="bottom-0 w-full bg-gray-900 opacity-50 flex justify-between hover:scale-110 transition-transform"
+                    style="padding: 10px; background-color: #6E6D6D;">
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/hotel.jpg" alt="Hotel Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Hotel</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/car.jpg" alt="Car Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Transfer</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/activity.jpg" alt="Activity Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Activity</p>
+                    </a>
+
+                    <a href="#"
+                        class="flex flex-col items-center px-1 py-1 transition duration-300 transform hover:scale-110">
+                        <img src="images/meals.jpg" alt="Meals Icon" class="w-6 h-6">
+                        <p class="text-xs text-white mt-1">Meals</p>
+                    </a>
+
+                </div>
+                <div
+                    class="absolute top-2 left bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold cursor-pointer">
+                    Best Value
+                </div>
+            </div>
+            <div class="w-10/12 h-80 mx-auto bg-white shadow-md overflow-hidden ml-5 relative mb-5 rounded-tl-xl rounded-bl-lg"
+                style="display: flex;">
+
+                <div class="inner">
+                    <div class="px-4 py-2 bg-gray-100 text-black relative"> <!-- Added relative positioning -->
+                        <h2 class="text-xl font-bold">Magnificent Trip of India</h2>
+                        <div class="absolute top-0 right-0 mt-2 flex items-center space-x-4">
+                            <!-- Adjusted positioning -->
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Like icon -->
+                                <a href="#" class="text-gray-600 hover:text-gray-800">
+                                    <img src="images/like.jpg" alt="Like Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                            <!-- Background div with gray color -->
+                            <div class=" p-1 rounded-full">
+                                <!-- Share icon -->
+                                <a href="#">
+                                    <img src="images/share.jpg" alt="Share Icon"
+                                        class="w-6 h-6 hover:scale-150 transition-transform">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Offer Details -->
+                    <div class="mt-1">
+                        <div class="flex mt-[+10px]">
+                            <div
+                                class="w-3/12 p-3 rounded-3xl mr-2 ml-6  hover:scale-110 transition-transform flex items-center justify-center">
+                                <div class="flex items-center justify-center border-dotted border border-black rounded-lg"
+                                    style="width: 120px; height: 40px; margin: 5px 10px;background-color: #4D6C6D;">
+                                    <p class="text-xs font-semibold cursor-pointer whitespace-nowrap">6 days / 5 nights
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div
+                                class="w-3/12 p-3 rounded-2xl mr-2 ml-6 hover:scale-110 transition-transform flex items-center justify-center ">
+                                <img src="images/fire.jpg" alt="" class="w-4 h-6 mr-1">
+                                <p class="text-xs font-semibold cursor-pointer">Top selling
+
+                                </p>
+                            </div>
+
+
+                            <div class="w-3/12 h-8 p-4 rounded-lg hover:scale-110 transition-transform ml-15 mt-3">
+                                <p class="text-xs font-semibold cursor-pointer text-pink-600 whitespace-nowrap">Hurry
+                                    Only a few seats left!</p>
+                            </div>
+
+                        </div>
+                        <div class="flex space-x-4 mt-[+10px]">
+                            <div class="my-div pl-4">
+                                <p class="city font-bold cursor-pointer">4 Cities: <span
+                                        class="text-pink-500 font-extrabold">2N</span>
+                                    Delhi</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold cursor-pointer"><span
+                                        class="text-pink-500 font-extrabold">1N</span> Agra</p>
+                            </div>
+                            <div class="my-div pl-2">
+                                <p class="city font-bold cursor-pointer"><span
+                                        class="text-pink-500 font-extrabold">1N</span> Jaipur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Trip Overview -->
+                    <div class="px-4 py-2 mt-[+10px]">
+                        <h2 class="text-sm font-bold text-gray-700">Trip Overview</h2>
+                        <p class="text-sm text-gray-700 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lectus id felis
+                            ultricies sollicitudin. Vestibulum at lorem nisi. Vivamus nec quam at nisl placerat
+                            scelerisque sed a ante. Duis non augue odio.
+                        </p>
+                        <a href="#" class="text-sm text-gray-600 font-semibold hover:underline">Read More</a>
+                    </div>
+
+                </div>
+                <div class="relative">
+                    <div class="relative top-0 right-25">
+                        <div class="bg-gray-500  px-20 py-24" style="background-color: #6E6D6D;">
+                            <!-- Pink box with discount information -->
+                            <div class="relative">
+                                <div class="  px-15 py-15">
+                                    <div
+                                        class=" inset-0 bg-white opacity-0 hover:opacity-500 transition-opacity duration-300 cursor-pointer">
+                                    </div>
+                                    </button>
+
+                                    <div class="bg-pink-500 border-white outline-white text-white px-4 py-2 rounded-lg mt-2 mt-[-20px]"
+                                        style="width: 120px; height: 40px; outline: 1px solid white;">
+                                        <h3 class="text-xs font-bold">60% OFF</h3>
+                                    </div>
+
+
+
+                                    <!-- Grey box with "Starting from $1200 per person" text -->
+                                    <div class=" text-white px-4 py-2 rounded-lg mt-2 text-2xl">
+                                        <p class="text-xs whitespace-nowrap">Price Starting from</p>
+                                        <p class="text-4xl">$1200</p>
+                                        <p class="text-xs">per person</p>
+                                    </div>
+                                    <div class="text-white px-4 mt-0 rounded-lg text-xs">
+                                        <p class="text-xs text-white-600 mt-0 whitespace-nowrap">. Deposit only $200</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-md 
+                            hover:bg-white-800 hover:shadow-lg transition duration-300 hover:scale-110 transition-transform cursor-pointer">
+                                Book Now
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-300 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-400 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-500 opacity-0 hover:opacity-10"></div> -->
+    <!-- 
+    <div id="mainforall"
+        style="flex: auto; transition: background-color 0.3s ease; padding: 8px; padding-left: 10%; padding-right: 10%;"
+        class="p-8 relative hover:bg-gray-200"> -->
+
+
+    </div>
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-300 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-400 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-500 opacity-0 hover:opacity-10"></div> -->
+
+
+    </div>
+    <!-- <div id="mainforall"
+        style="flex: auto; transition: background-color 0.3s ease; padding: 8px; padding-left: 10%; padding-right: 10%;"
+        class="p-8 relative hover:bg-gray-200">
+         -->
+    </div>
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-300 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-400 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-500 opacity-0 hover:opacity-10"></div> -->
+
+
+    </div>
+    <!-- <div id="mainforall"
+        style="flex: auto; transition: background-color 0.3s ease; padding: 8px; padding-left: 10%; padding-right: 10%;"
+        class="p-8 relative hover:bg-gray-200"> -->
+
+
+    </div>
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-300 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-400 opacity-0 hover:opacity-10"></div> -->
+    <!-- <div class="absolute inset-0 bg-transparent hover:bg-gray-500 opacity-0 hover:opacity-10"></div> -->
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+    <!-- <script>
+        const searchFun = () => {
+            let filter = document.getElementById('myInput').value.toUppercase();
+
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,170 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="overflow-x-hidden w-screen">
-    <header
-      class="overflow-hidden relative bg-[url('/images/bg1.jpeg')] w-full aspect-[19/9] bg-cover bg-center text-white"
-    >
-      <nav class="flex justify-between items-center p-5">
-        <div class="flex items-center space-x-4">
-          <h1 class="flex items-center gap-x-2 md:text-xl text-sm">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M0 0V24H24V0H0ZM3.41421 2L12 10.5858L20.5858 2H3.41421ZM22 3.41421L13.4142 12L22 20.5858V3.41421ZM20.5858 22L12 13.4142L3.41421 22H20.5858ZM2 20.5858L10.5858 12L2 3.41421V20.5858Z"
-                fill="white"
-              />
-            </svg>
-            Webby Frames
-          </h1>
-        </div>
-        <div class="text-xs flex items-center md:text-lg space-x-4">
-          <a href="#" class="hover:underline text-white">Home</a>
-          <a href="#" class="hover:underline text-white">Tours</a>
-          <a href="#" class="hover:underline text-white">Travel Styles</a>
-          <a href="#" class="hover:underline text-white">About us</a>
-          <a
-            href="#"
-            class="underline text-black bg-white border-black border-2 px-1"
-            >Sign in</a
-          >
-        </div>
-      </nav>
-      <div class="flex justify-between pr-5">
-        <div
-          class="text-transparent p-5 bg-gradient-to-r bg-clip-text from-white md:text-4xl font-extrabold"
-        >
-          The <br />Magnificent <br />
-          Taj Mahal
-        </div>
-        <div class="w-1/3 text-sm h-full md:mt-10">
-          <div class="flex h-full items-end gap-1">
-            <div>
-              <div
-                class="bg-white text-black rounded-full w-5 flex items-center justify-center cursor-pointer"
-              >
-                &lt;
-              </div>
-              <div
-                class="bg-white text-black rounded-full w-5 flex items-center justify-center cursor-pointer"
-              >
-                &gt;
-              </div>
-            </div>
-            <div class="h-[80%] bg-[rgba(255,255,255,0.4)] p-2 rounded-xl mr-3">
-              <div class="md:text-lg">Heritage of India</div>
-              <div class="h-20 md:h-80 overflow-hidden">
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Nesciunt veniam sequi id corrupti explicabo, porro harum. Neque
-                nam commodi quia veritatis fugit non sint sed itaque molestias
-                assumenda distinctio consequatur corporis sunt maxime repellat
-                eveniet labore, facere maiores deleniti incidunt saepe officiis?
-                Quibusdam laboriosam, nulla sint odit libero voluptatem in?
-              </div>
-            </div>
-          </div>
-          <div class="flex mt-4 justify-around">
-            <div
-              class="overflow-hidden bg-white text-black flex rounded-xl items-center justify-between pr-3 mr-4"
-            >
-              <img
-                src="https://c.animaapp.com/2daeC6XF/img/rectangle-402-1.svg"
-                class="h-full w-1/2"
-              />
-              <div>Heritage</div>
-            </div>
-            <div
-              class="overflow-hidden bg-white text-black flex rounded-xl items-center justify-between pr-3"
-            >
-              <img
-                src="https://c.animaapp.com/2daeC6XF/img/rectangle-402.svg"
-                class="h-full w-1/2"
-              />
-              <div>Culture</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div
-        class="text-3xl absolute bottom-0 left-1/2 bg-white text-black w-10 h-10 translate-y-[20px] rounded-full flex items-start justify-center"
-      >
-        &uarr;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+</head>
+
+<body class="overflow-x-hidden w-screen">
+  <header
+    class="overflow-hidden relative bg-[url('/images/bg1.jpeg')] w-full aspect-[19/9] bg-cover bg-center text-white">
+    <nav class="flex justify-between items-center p-5">
+      <div class="flex items-center space-x-4">
+        <h1 class="flex items-center gap-x-2 md:text-xl text-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0 0V24H24V0H0ZM3.41421 2L12 10.5858L20.5858 2H3.41421ZM22 3.41421L13.4142 12L22 20.5858V3.41421ZM20.5858 22L12 13.4142L3.41421 22H20.5858ZM2 20.5858L10.5858 12L2 3.41421V20.5858Z"
+              fill="white" />
+          </svg>
+          Webby Frames
+        </h1>
       </div>
-    </header>
-    <main class="mx-3 p-5 md:mx-10 mt-10">
-      <h1 class="md:text-2xl">
-        Unforgettable travel adventures, tailored just for you
-      </h1>
-      <div class="text-slate-600 text-sm">
-        Lorem ipsum dolor sit amet consectetur. Nulla tortor mauris sit diam
-        massa viverra. Aliquam massa amet malesuada fermentum faucibus dictum
-        senectus ipsum a. Ac dapibus amet et congue. In quisque blandit
+      <div class="text-xs flex items-center md:text-lg space-x-4">
+        <a href="#" class="hover:underline text-white hidden md:block">Home</a>
+        <a href="./page2.html" class="hover:underline text-white hidden md:block">Tours</a>
+        <a href="#" class="hover:underline text-white hidden md:block">Travel Styles</a>
+        <a href="#" class="hover:underline text-white hidden md:block">About us</a>
+        <a href="#" class="underline text-black bg-white border-black border-2 px-1">Sign in</a>
       </div>
-      <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mt-10">
-        <div>
-          <img class="w-full" src="/images/a1.png" alt="" />
-          <div class="md:text-lg text-sm mt-5">
-            Enjoy Magical Sunset at Taj Mahal
+    </nav>
+    <div class="flex justify-between pr-5">
+      <div class="text-transparent p-5 bg-gradient-to-r bg-clip-text from-white md:text-4xl font-extrabold">
+        The <br />Magnificent <br />
+        Taj Mahal
+      </div>
+      <div class="w-1/3 text-sm h-full md:mt-10">
+        <div class="flex h-full items-end gap-1">
+          <div>
+            <div class="bg-white text-black rounded-full w-5 flex items-center justify-center cursor-pointer">
+              &lt;
+            </div>
+            <div class="bg-white text-black rounded-full w-5 flex items-center justify-center cursor-pointer">
+              &gt;
+            </div>
           </div>
-          <button class="border-2 border-black px-3 my-2 text-black">
-            Explore
-          </button>
+          <div class="h-[80%] bg-[rgba(255,255,255,0.4)] p-2 rounded-xl mr-3">
+            <div class="md:text-lg">Heritage of India</div>
+            <div class="h-20 md:h-80 overflow-hidden">
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Nesciunt veniam sequi id corrupti explicabo, porro harum. Neque
+              nam commodi quia veritatis fugit non sint sed itaque molestias
+              assumenda distinctio consequatur corporis sunt maxime repellat
+              eveniet labore, facere maiores deleniti incidunt saepe officiis?
+              Quibusdam laboriosam, nulla sint odit libero voluptatem in?
+            </div>
+          </div>
         </div>
-        <div>
-          <img class="w-full" src="/images/a2.png" alt="" />
-          <div class="md:text-lg text-sm mt-5">
-            Immerse Yourself in Elephant Bliss in Jaipur!
+        <div class="flex mt-4 justify-around">
+          <div class="overflow-hidden bg-white text-black flex rounded-xl items-center justify-between pr-3 mr-4">
+            <img src="https://c.animaapp.com/2daeC6XF/img/rectangle-402-1.svg" class="h-full w-1/2" />
+            <div>Heritage</div>
           </div>
-          <button class="border-2 border-black px-3 my-2 text-black">
-            Explore
-          </button>
-        </div>
-        <div>
-          <img class="w-full" src="/images/a3.png" alt="" />
-          <div class="md:text-lg text-sm mt-5">
-            Experience the Venice of India with a Scenic Boat Ride on Lake
-            Pichola!
+          <div class="overflow-hidden bg-white text-black flex rounded-xl items-center justify-between pr-3">
+            <img src="https://c.animaapp.com/2daeC6XF/img/rectangle-402.svg" class="h-full w-1/2" />
+            <div>Culture</div>
           </div>
-          <button class="border-2 border-black px-3 my-2 text-black">
-            Explore
-          </button>
         </div>
       </div>
-      <h1 class="md:text-2xl mt-10">Explore our top travel packages</h1>
-      <span class="inline border-b-2 border-black">
-        <a class="mr-5 text-red-600 border-b-2 border-red-600" href="#"
-          >West India</a
-        >
-        <a class="mr-5" href="#">North India</a>
-        <a class="mr-5" href="#">Southerm India</a>
-        <a class="" href="#">East India</a>
+    </div>
+
+    <div
+      class="text-3xl absolute bottom-0 left-1/2 bg-white text-black w-10 h-10 translate-y-[20px] rounded-full flex items-start justify-center">
+      &uarr;
+    </div>
+  </header>
+  <main class="mx-3 p-5 md:mx-10 mt-10">
+    <h1 class="md:text-2xl">
+      Unforgettable travel adventures, tailored just for you
+    </h1>
+    <div class="text-slate-600 text-sm">
+      Lorem ipsum dolor sit amet consectetur. Nulla tortor mauris sit diam
+      massa viverra. Aliquam massa amet malesuada fermentum faucibus dictum
+      senectus ipsum a. Ac dapibus amet et congue. In quisque blandit
+    </div>
+    <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mt-10">
+      <div>
+        <img class="w-full" src="/images/a1.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">
+          Enjoy Magical Sunset at Taj Mahal
+        </div>
+        <button class="border-2 border-black px-3 my-2 text-black">
+          Explore
+        </button>
+      </div>
+      <div>
+        <img class="w-full" src="/images/a2.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">
+          Immerse Yourself in Elephant Bliss in Jaipur!
+        </div>
+        <button class="border-2 border-black px-3 my-2 text-black">
+          Explore
+        </button>
+      </div>
+      <div>
+        <img class="w-full" src="/images/a3.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">
+          Experience the Venice of India with a Scenic Boat Ride on Lake
+          Pichola!
+        </div>
+        <button class="border-2 border-black px-3 my-2 text-black">
+          Explore
+        </button>
+      </div>
+    </div>
+    <h1 class="md:text-2xl mt-10">Explore our top travel packages</h1>
+    <span class="inline border-b-2 border-black">
+      <a class="mr-5 text-red-600 border-b-2 border-red-600" href="#">West India</a>
+      <a class="mr-5" href="#">North India</a>
+      <a class="mr-5" href="#">Southerm India</a>
+      <a class="" href="#">East India</a>
+    </span>
+    <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&gt;</span>
+    <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&lt;</span>
+    <div class="grid gap-6 grid-cols-1 md:grid-cols-4 mt-10">
+      <div>
+        <img class="w-full" src="/images/b1.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
+        <div class="text-xs">
+          Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
+        </div>
+        <div class="flex justify-between mt-3">
+          <div class="text-xs">
+            Price starting from
+            <div class="text-lg text-pink-600">₹20,000</div>
+          </div>
+          <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
+        </div>
+      </div>
+      <div>
+        <img class="w-full" src="/images/b2.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
+        <div class="text-xs">
+          Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
+        </div>
+        <div class="flex justify-between mt-3">
+          <div class="text-xs">
+            Price starting from
+            <div class="text-lg text-pink-600">₹20,000</div>
+          </div>
+          <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
+        </div>
+      </div>
+      <div>
+        <img class="w-full" src="/images/b3.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
+        <div class="text-xs">
+          Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
+        </div>
+        <div class="flex justify-between mt-3">
+          <div class="text-xs">
+            Price starting from
+            <div class="text-lg text-pink-600">₹20,000</div>
+          </div>
+          <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
+        </div>
+      </div>
+      <div>
+        <img class="w-full" src="/images/b4.png" alt="" />
+        <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
+        <div class="text-xs">
+          Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
+        </div>
+        <div class="flex justify-between mt-3">
+          <div class="text-xs">
+            Price starting from
+            <div class="text-lg text-pink-600">₹20,000</div>
+          </div>
+          <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <span class="inline md:text-2xl mt-10">
+        Explore our Most Traveled Destinations
       </span>
-      <span
-        class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-        >&gt;</span
-      >
-      <span
-        class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-        >&lt;</span
-      >
+      <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&gt;</span>
+      <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&lt;</span>
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-4 mt-10">
+        <div>
+          <img class="w-full" src="/images/c1.png" alt="" />
+          <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
+        </div>
+        <div>
+          <img class="w-full" src="/images/c2.png" alt="" />
+          <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
+        </div>
+        <div>
+          <img class="w-full" src="/images/c3.png" alt="" />
+          <div class="md:text-lg text-sm flex justify-center">Agra</div>
+        </div>
+        <div>
+          <img class="w-full" src="/images/c4.png" alt="" />
+          <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
+        </div>
+      </div>
+    </div>
+    <img src="/images/d2.png" class="w-full mt-10" alt="" />
+    <div class="mt-10">
+      <span class="inline md:text-2xl mt-10">
+        Explore our top travel packages
+      </span>
+      <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&gt;</span>
+      <span class="float-right px-2 rounded-full bg-black text-white cursor-pointer">&lt;</span>
       <div class="grid gap-6 grid-cols-1 md:grid-cols-4 mt-10">
         <div>
           <img class="w-full" src="/images/b1.png" alt="" />
@@ -223,236 +275,127 @@
           </div>
         </div>
       </div>
+    </div>
+  </main>
+  <div class="mt-10 relative h-40 md:h-60 overflow-hidden bg-[#01395A] flex justify-around items-center">
+    <img src="/images/e2.png" alt="" class="h-full" />
+    <div class="text-white md:text-3xl w-1/2">
+      Trending Hot Deals You Can’t Miss
+      <div class="flex mt-10">
+        <div class="text-base border-r-2 pr-4 md:pr-10 w-1/2">
+          Incredible India Trip
+          <div class="text-xs hidden md:block">
+            Lorem ipsum dolor sit amet consectetur. Nulla tortor mauris sit
+            diam massa viverra. Aliquam massa amet malesuada fermentum
+            faucibus dictum senectus ipsum a. Ac dapibus amet et congue. In
+            quisque blandit
+          </div>
+        </div>
+        <div class="pl-4 md:pl-10">
+          <div class="font-extrabold">45% off</div>
+          <button class="mt-3 block px-2 border-2 text-base">Explore</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-5 md:mx-10">
+    <div class="md:text-2xl text-slate-500 mt-10">
+      # crafting memories for you
+    </div>
+    <div class="md:text-2xl text-black">
+      Valuable
+      <span class="font-bold">feedback</span>
+      from our
+      <span class="font-bold">travelers</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
+      <img src="/images/f.png" class="" alt="" />
+      <div class="">
+        <div class="text-2xl">
+          Review of: Full-Day Taj Mahal, Red Fort, and Fatehpur Sikri Tour
+          from Agra
+        </div>
+        <div class="text-yellow-500 text-xl">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+        </div>
+        <div class="text-slate-500">
+          We had a marvelous trip! Culture holidays is a great company. They
+          made sure all our needs were taken care of in regards to food,
+          health, allergies, comfort, etc… there guides were very
+          knowledgeable & experienced!
+        </div>
+        <div class="flex justify-between mt-10">
+          <div class="flex gap-2">
+            <img src="/images/pp.png" class="h-10 rounded-full" alt="" />
+            <div>
+              <div>Anthony</div>
+              <div class="text-sm text-gray-600">March 2023</div>
+            </div>
+          </div>
+          <div class="border-2 border-black px-2 flex items-center">
+            View Next Review &gt;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 md:text-2xl text-black">
+      Explore our <span class="font-bold">Travel Gallery</span>
+    </div>
+  </div>
+  <div class="flex md:flex-row flex-col items-stretch justify-between md:h-96 h-auto gap-5 mt-10">
+    <img class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover" src="images/g1.jpeg" alt="" />
+    <img class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover" src="images/g2.jpeg" alt="" />
+    <img class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover" src="images/g3.jpeg" alt="" />
+  </div>
 
-      <div class="mt-10">
-        <span class="inline md:text-2xl mt-10">
-          Explore our Most Traveled Destinations
-        </span>
-        <span
-          class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-          >&gt;</span
-        >
-        <span
-          class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-          >&lt;</span
-        >
-        <div class="grid gap-6 grid-cols-1 md:grid-cols-4 mt-10">
-          <div>
-            <img class="w-full" src="/images/c1.png" alt="" />
-            <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/c2.png" alt="" />
-            <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/c3.png" alt="" />
-            <div class="md:text-lg text-sm flex justify-center">Agra</div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/c4.png" alt="" />
-            <div class="md:text-lg text-sm flex justify-center">Jaipur</div>
-          </div>
-        </div>
-      </div>
-      <img src="/images/d2.png" class="w-full mt-10" alt="" />
-      <div class="mt-10">
-        <span class="inline md:text-2xl mt-10">
-          Explore our top travel packages
-        </span>
-        <span
-          class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-          >&gt;</span
-        >
-        <span
-          class="float-right px-2 rounded-full bg-black text-white cursor-pointer"
-          >&lt;</span
-        >
-        <div class="grid gap-6 grid-cols-1 md:grid-cols-4 mt-10">
-          <div>
-            <img class="w-full" src="/images/b1.png" alt="" />
-            <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
-            <div class="text-xs">
-              Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
-            </div>
-            <div class="flex justify-between mt-3">
-              <div class="text-xs">
-                Price starting from
-                <div class="text-lg text-pink-600">₹20,000</div>
-              </div>
-              <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
-            </div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/b2.png" alt="" />
-            <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
-            <div class="text-xs">
-              Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
-            </div>
-            <div class="flex justify-between mt-3">
-              <div class="text-xs">
-                Price starting from
-                <div class="text-lg text-pink-600">₹20,000</div>
-              </div>
-              <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
-            </div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/b3.png" alt="" />
-            <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
-            <div class="text-xs">
-              Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
-            </div>
-            <div class="flex justify-between mt-3">
-              <div class="text-xs">
-                Price starting from
-                <div class="text-lg text-pink-600">₹20,000</div>
-              </div>
-              <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
-            </div>
-          </div>
-          <div>
-            <img class="w-full" src="/images/b4.png" alt="" />
-            <div class="md:text-lg text-sm mt-5">Amazing Thailand</div>
-            <div class="text-xs">
-              Lorem ipsum dolor sit amet consectetur. Magna id tempor dignissim
-            </div>
-            <div class="flex justify-between mt-3">
-              <div class="text-xs">
-                Price starting from
-                <div class="text-lg text-pink-600">₹20,000</div>
-              </div>
-              <button class="bg-blue-600 px-3 my-2 text-white">Explore</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div
-      class="mt-10 relative h-40 md:h-60 overflow-hidden bg-[#01395A] flex justify-around items-center"
-    >
-      <img src="/images/e2.png" alt="" class="h-full" />
-      <div class="text-white md:text-3xl w-1/2">
-        Trending Hot Deals You Can’t Miss
-        <div class="flex mt-10">
-          <div class="text-base border-r-2 pr-4 md:pr-10 w-1/2">
-            Incredible India Trip
-            <div class="text-xs hidden md:block">
-              Lorem ipsum dolor sit amet consectetur. Nulla tortor mauris sit
-              diam massa viverra. Aliquam massa amet malesuada fermentum
-              faucibus dictum senectus ipsum a. Ac dapibus amet et congue. In
-              quisque blandit
-            </div>
-          </div>
-          <div class="pl-4 md:pl-10">
-            <div class="font-extrabold">45% off</div>
-            <button class="mt-3 block px-2 border-2 text-base">Explore</button>
-          </div>
-        </div>
-      </div>
+  <div class="flex flex-col md:flex-row md:mx-40 mx-10 mt-20 gap-20 justify-between items-center text-slate-500">
+    <div class="md:w-1/2">
+      INDIA: + 91 987 355 5111, <br />
+      + 91 11 4142 5213 <br />
+      USA : + 1 800 315 0755 (Toll free) <br />
+      <br />
+      Office Address: Culture Holidays India Pvt. Ltd.3rd Floor, Plot Number
+      3, Sector 12 A, Dwarka,New Delhi - 110078, India
     </div>
-    <div class="mx-5 md:mx-10">
-      <div class="md:text-2xl text-slate-500 mt-10">
-        # crafting memories for you
+    <div class="flex justify-between">
+      <div>
+        About Us <br />Careers<br />
+        Privacy Policy <br />Cancellation Policy <br />Feedback <br />Terms &
+        condition <br />Magazine <br />Meet The Team
       </div>
-      <div class="md:text-2xl text-black">
-        Valuable
-        <span class="font-bold">feedback</span>
-        from our
-        <span class="font-bold">travelers</span>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 mt-5">
-        <img src="/images/f.png" class="" alt="" />
-        <div class="">
-          <div class="text-2xl">
-            Review of: Full-Day Taj Mahal, Red Fort, and Fatehpur Sikri Tour
-            from Agra
-          </div>
-          <div class="text-yellow-500 text-xl">
-            &#9733;&#9733;&#9733;&#9733;&#9733;
-          </div>
-          <div class="text-slate-500">
-            We had a marvelous trip! Culture holidays is a great company. They
-            made sure all our needs were taken care of in regards to food,
-            health, allergies, comfort, etc… there guides were very
-            knowledgeable & experienced!
-          </div>
-          <div class="flex justify-between mt-10">
-            <div class="flex gap-2">
-              <img src="/images/pp.png" class="h-10 rounded-full" alt="" />
-              <div>
-                <div>Anthony</div>
-                <div class="text-sm text-gray-600">March 2023</div>
-              </div>
-            </div>
-            <div class="border-2 border-black px-2 flex items-center">
-              View Next Review &gt;
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-10 md:text-2xl text-black">
-        Explore our <span class="font-bold">Travel Gallery</span>
-      </div>
+      <div>Legal <br />Contact <br />Loyality Program</div>
     </div>
-    <div
-      class="flex md:flex-row flex-col items-stretch justify-between md:h-96 h-auto gap-5 mt-10"
-    >
-      <img
-        class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover"
-        src="images/g1.jpeg"
-        alt=""
-      />
-      <img
-        class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover"
-        src="images/g2.jpeg"
-        alt=""
-      />
-      <img
-        class="rounded-xl hover:scale-125 transition-all md:h-auto h-40 object-cover"
-        src="images/g3.jpeg"
-        alt=""
-      />
-    </div>
+  </div>
 
-    <div
-      class="flex flex-col md:flex-row md:mx-40 mx-10 mt-20 gap-20 justify-between items-center text-slate-500"
-    >
-      <div class="md:w-1/2">
-        INDIA: + 91 987 355 5111, <br />
-        + 91 11 4142 5213 <br />
-        USA : + 1 800 315 0755 (Toll free) <br />
-        <br />
-        Office Address: Culture Holidays India Pvt. Ltd.3rd Floor, Plot Number
-        3, Sector 12 A, Dwarka,New Delhi - 110078, India
-      </div>
-      <div class="flex justify-between">
-        <div>
-          About Us <br />Careers<br />
-          Privacy Policy <br />Cancellation Policy <br />Feedback <br />Terms &
-          condition <br />Magazine <br />Meet The Team
-        </div>
-        <div>Legal <br />Contact <br />Loyality Program</div>
-      </div>
-    </div>
+  <div class="flex justify-center gap-5 my-20">
+    <i
+      class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-facebook-f cursor-pointer"></i>
+    <i
+      class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-twitter cursor-pointer"></i>
+    <i
+      class="border-2 border-black w-10 h-10 text-lg rounded-full flex items-center justify-center fa fa-instagram cursor-pointer"></i>
+    <i
+      class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-linkedin-square cursor-pointer"></i>
+    <i
+      class="border-2 border-black w-10 h-10 text-lg rounded-full flex items-center justify-center fa fa-youtube-play cursor-pointer"></i>
 
-    <div class="flex justify-center gap-5 my-20">
-      <i
-        class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-facebook-f cursor-pointer"
-      ></i>
-      <i
-        class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-twitter cursor-pointer"
-      ></i>
-      <i
-        class="border-2 border-black w-10 h-10 text-lg rounded-full flex items-center justify-center fa fa-instagram cursor-pointer"
-      ></i>
-      <i
-        class="border-2 border-black w-10 h-10 text-lg rounded-full bg-slate-300 flex items-center justify-center fa fa-linkedin-square cursor-pointer" 
-    
-      ></i>
-      <i
-        class="border-2 border-black w-10 h-10 text-lg rounded-full flex items-center justify-center fa fa-youtube-play cursor-pointer"
-      ></i>
-    </div>
-  </body>
+  </div>
+  <!-- <h2 style="text-align: center; text-transform: uppercase; color: grey;">Refine your Search</h2>
+    <input type="text" id="myInput" placeholder="names. ." onkeyup="searchFun()">
+    <table id="myTable">
+      <tr class="header">
+        <th style="width: 40%;">Include locations</th>
+        <th style="width: 40%;">Travel Month</th>
+        <th style="width: 40%;">Travel Budget</th>
+        <th style="width: 40%;">Hotel Rating</th>
+      </tr>
+    </table>
+    <script>
+    const searchFun=()=>{
+      let filter = document.getElementById('myInput');
+
+    } -->
+  </script>
+</body>
+
 </html>
