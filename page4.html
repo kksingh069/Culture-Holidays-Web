@@ -10,6 +10,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -83,6 +84,7 @@
             padding: 20px;
             font-family: Playfair Display;
         }
+        
     </style>
 
 
@@ -95,7 +97,7 @@
         style="background:url(images/hotb-Copy.jpg); background-size: cover; background-position: center;height: 300px;">
     </section>
     <section>
-        <div class="container-xxl">
+        <div class="Container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="row">
@@ -202,7 +204,7 @@
                             </div>
                             <div class="third-head">
                                 <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5" style="color: #696969;">
                                         <h2>Add Travelers</h2>
 
                                     </div>
@@ -215,61 +217,51 @@
                                     <div class="col-md-4">
                                         <div class="dropdown">
                                             <a class="btn btn-secondary dropdown-toggle " href="#" role="button"
-                                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                            style="background-color: #FFFFFF; color: #545454;">
-                                            Select No of Rooms
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <li><a class="dropdown-item" href="#">1</a></li>
-                                            <li><a class="dropdown-item" href="#">2</a></li>
-                                            <li><a class="dropdown-item" href="#">3</a></li>
-                                        </ul>
+                                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                                style="background-color: #FFFFFF; color: #545454;">
+                                                Select No of Rooms
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">1</a></li>
+                                                <li><a class="dropdown-item" href="#">2</a></li>
+                                                <li><a class="dropdown-item" href="#">3</a></li>
+                                            </ul>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-md-12">
+
+                        <div class="container">
                             <div class="row">
-                                <div class="button-group">
-                                    <button id="removeTabs" class="btn btn-danger">-</button>
-                                    <button id="addTabs" class="btn btn-primary">+</button>
+                                <div class="col-md-5">
+
+                                    <h2
+                                        style="background-color: #00A0AE; color: #FFFFFF; width: 192px; height: 50px; text-align: center;">
+                                        Room 1
+                                    </h2>
+
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="tabs" class="form-label">Number of Tabs:</label>
-                                        <input type="number" class="form-control" id="tabs" min="0" value="1">
-                                    </div>
+                                <div class="col-md-3">
+
+                                    <h4 style="color: #00A0AE; ">
+                                        Add
+                                        Guest
+                                    </h4>
+
+
                                 </div>
-                                <hr>
-                                <div id="tabContent">
-                                    <div class="tab-pane fade show active" id="tab1">
-                                        <h3>Tab 1</h3>
-                                        <p>This is tab 1 content.</p>
-                                    </div>
+                                <div class="col-md-4" style="display: flex; align-items: center;">
+                                    <i class="bi bi-dash-square" style="margin-right: 10px; width: 20px; height: 20px;"></i>
+                                    <h2 class="plus-minus-shape" style="color: #9D9D9D; font-weight: 600; margin: 0 10px;">03</h2>
+                                    <i class="bi bi-file-plus" style="margin-left: 10px;"></i>
                                 </div>
-                            </div>
-
-                        </div> -->
-                        <div class="col-md-3">
-                            <div class="row">
-                                <h2 style="background-color: #00A0AE; color: #FFFFFF; width: 300px; text-align: center;">
-                                    Room 1
-                                </h2>
+                                
+                                
 
 
-                            </div>
 
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <h2 style="color: #00A0AE; margin-left: 20px;">
-                                    Add Guest
-                                </h2>
-                                <h4>
-                                    
-                                </h4>
                             </div>
                         </div>
 

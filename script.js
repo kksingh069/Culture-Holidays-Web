@@ -9,7 +9,6 @@ $(document).ready(function() {
     // Initial number of tabs
     var numTabs = 1;
 
-    // Function to update tab content
     function updateTabContent() {
       $('#tabContent').empty();
       for (var i = 1; i <= numTabs; i++) {
@@ -35,19 +34,29 @@ $(document).ready(function() {
       }
     }
 
-    // Add tabs when + button is clicked
     $('#addTabs').click(function() {
       addTabs();
     });
 
-    // Remove tabs when - button is clicked
+
     $('#removeTabs').click(function() {
       removeTabs();
     });
 
-    // Update tab content on input change
     $('#tabs').on('input', function() {
       numTabs = parseInt($(this).val());
       updateTabContent();
     });
   });
+  var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel)
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+})
+var myCarousel = document.getElementById('myCarousel')
+
+myCarousel.addEventListener('slide.bs.carousel', function () {
+  // do something...
+})
