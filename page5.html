@@ -12,6 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-sJ6Ab1VWyO4CI4I7qxYhXOWRBXUgwkVvMlApjOciFkY1cL+ndxCszC8z1Lr+RhcKhY0WHMDCyPkE4cQcKVRc1Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -78,7 +84,6 @@
 
         .tick-span::before {
             content: "\2713";
-            /* Unicode character for a checkmark */
             color: blue;
             margin-right: 5px;
         }
@@ -91,16 +96,73 @@
             border: 1.5px solid black;
         }
 
-        .row {
-            margin: 10px 5px;
-            font-family: Intel;
 
-        }
 
         .container3 {
             border-left: 60px solid #3B55A8;
             height: 100px;
             margin-left: 60px;
+        }
+
+        .slider {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .slider img {
+            width: 280px;
+            height: 286px;
+            ;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .slider img:last-child {
+            margin-right: 0;
+            /* Remove gap for the last image */
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            background-color: #3B55A8;
+            border-radius: 50%;
+            display: inline-block;
+
+        }
+
+        .cities .row {
+            display: flex;
+        }
+
+        .cities .col-auto {
+            display: flex;
+            align-items: center;
+        }
+
+        .cities .dot {
+            width: 9px;
+            height: 9px;
+            background-color: #3B55A8;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .zoom-in {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .zoom-in:hover {
+            transform: scale(1.1);
+
+        }
+
+        .col-md-3:hover {
+            transform: scale(1.1);
         }
     </style>
 
@@ -120,32 +182,34 @@
                             style="opacity: 1; color: white; width: 394px; height: 500px; margin-top: 95px; ">
                             <div class="small-card"
                                 style="background-color: #F2F2F2; position: absolute; top: 0; ; right: 0; height: 130px;">
-                                <h1 style="color: #000000; margin: 10px;">
+                                <h1 style="color: #000000; margin: 10px; font-weight: bolder;">
                                     Transformative trip to India
                                     <div class="sub-class"
-                                        style="display: inline-block; width: 128px; height: 28px; background-color: #d9dff4; margin-left: 10px;  top: -5px; padding: 5px;">
-                                        <h6 style="font-size: x-small; text-align: center; padding: 5px;">2k+ BOOKINGS
-                                            DONE</h6>
+                                        style="display: inline-block; width: 128px; height: 28px; background-color: #d9dff4; margin-left: 10px; top: -5px; padding: 5px; border-radius: 20px; border: 1px dotted #000;">
+                                        <h6 style="font-size: x-small; text-align: center; padding: 5px;"><b>2k+</b>
+                                            BOOKINGS DONE</h6>
                                     </div>
+
+
                                 </h1>
                             </div>
-                            <div class="row" style="position: absolute; top: 140px;">
+                            <div class="row" style="position: absolute; top: 120px; margin-right: 15px;">
                                 <div class="sub-row">
                                     <p
                                         style="color: #696969; font-family: Open Sans; font-weight: 700;font-size: large; display: inline-block;">
                                         Quick action :
                                     </p>
                                     <p style="font-family: Nunito Sans; color: #545454; display: inline-block;">
-                                        <i class="fas fa-newspaper"></i> Download Itinerary
+                                        <i class="ri-folder-download-line zoom-in"></i> Download Itinerary
                                     </p>
 
                                     <p style="color: #545454; font-family: Nunito Sans; display: inline-block;">
-                                        <i class="fas fa-newspaper"></i> Create Flyer
+                                        <i class="ri-folder-download-line zoom-in"></i> Create Flyer
                                     </p>
                                 </div>
                                 <div class="third-card" style="width: 394px; height: 49px; background-color: #5B5A5A; ">
                                     <span style="display: inline-block; margin-top: 10px;"><i
-                                            class="fa-sharp fa-regular fa-clock"></i>5
+                                            class="fa-sharp fa-regular fa-clock "></i>5
                                         Nights | 6 Days</span>
                                     <span style="display: inline-block; margin-left: 55px;">
                                         <i class="fas fa-globe-americas"></i> 5 Cities
@@ -159,7 +223,7 @@
                                         </div>
                                         <div class="col-auto">
                                             <div class="dot"></div>
-                                            <span style="color: #4B70E2">Mykonos</span>
+                                            <span style=" color: #4B70E2">Mykonos</span>
                                         </div>
                                         <div class="col-auto">
                                             <div class="dot"></div>
@@ -169,48 +233,68 @@
                                             <div class="dot"></div>
                                             <span style="color: #4B70E2">Athens</span>
                                         </div>
-                                        <div class="col-auto">
+                                        <!-- <div class="col-auto">
                                             <div class="dot"></div>
                                             <span style="color: #4B70E2">Athens</span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <h5 style="margin-top: 20px; color: #696969 ">
                                     Trip Inclusions :
                                 </h5>
                                 <div class="trip-inclusion" style="display: flex;">
-                                    <span style="color: #676767; text-align: center;">
-                                        <i class="fa-sharp fa-thin fa-car"></i><br>Transfers
+                                    <span
+                                        style="color: #676767; text-align: center; margin-right: 20px; display: inline-block; position: relative;">
+                                        <i class="ri-car-line"
+                                            style="font-size: 20px; background-color: #ccc; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;"></i><br>
+                                        <span style="font-size: 12px;">Transfers</span>
                                     </span>
-                                    <span style="color: #676767; text-align: center;">
-                                        <i class="fa-regular fa-fork-knife"></i><br>Meals
+
+                                    <span
+                                        style="color: #676767; text-align: center; margin-right: 20px; display: inline-block; position: relative;">
+                                        <i class="ri-restaurant-2-line"
+                                            style="font-size: 20px; background-color: #ccc; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;"></i><br>
+                                        <span style="font-size: 12px;">Meals</span>
                                     </span>
-                                    <span style="color: #676767; text-align: center;">
-                                        <i class="fa-light fa-camera"></i><br>Sightseeing
+
+                                    <span
+                                        style="color: #676767; text-align: center; margin-right: 20px; display: inline-block; position: relative;">
+                                        <i class="ri-camera-2-line"
+                                            style="font-size: 20px; background-color: #ccc; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;"></i><br>
+                                        <span style="font-size: 12px;">Sightseeing</span>
                                     </span>
-                                    <span style="color: #676767; text-align: center;">
-                                        <i class="fa-sharp fa-thin fa-building"></i><br>Accommodation
+
+
+                                    <span
+                                        style="color: #676767; text-align: center; display: inline-block; position: relative;">
+                                        <i class="ri-building-4-line"
+                                            style="font-size: 20px; background-color: #ccc; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px;"></i><br>
+                                        <span style="font-size: 12px;">Accommodation</span>
                                     </span>
+
                                 </div>
 
-                                <div class="pricing" style="padding: 20px;">
+
+                                <div class="pricing" style="">
                                     <span style="width: 164px; height: 25px; color: #676767;">
                                         PRICES STARTING FROM
                                     </span>
                                     <span
-                                        style="color: #676767; display: flex; flex-direction: column; margin-left: 75px; text-decoration: line-through;">
+                                        style="color: #676767; display: flex;  margin-left: 75px; text-decoration: line-through;">
                                         $1439
                                     </span>
                                     <span
-                                        style="color: #676767; display: flex; flex-direction: column; margin-left: 25px;  width: 91px; height: 25px; font-weight: 600; font-size: xx-large;">
+                                        style="color: #676767; display: flex; flex-direction: column; margin-left: 25px;  width: 91px; height: 25px; font-weight: 800; font-size: xx-large;">
                                         $999
                                     </span>
 
                                     <div class="book-now" style="text-align: right;">
-                                        <span style="width: 158px; height: 42px; ">
+                                        <span style="width: 158px; height: 42px; margin-right: 20px;  cursor: pointer;">
                                             Book Now
                                         </span>
                                     </div>
+
+
                                 </div>
 
                             </div>
@@ -225,37 +309,40 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="second-part"
-                    style=" margin-left: 45px; width: 357px; height: 334px; background-size: cover; background-position: center; background:url(images/image4.jpg)">
+                    style="margin-left: 45px; width: 457px; height: 384px; overflow: hidden; margin-top: 75px;">
+                    <img src="images/image4.jpg" alt="Image" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
+
+
 
             </div>
-            <div class="col-md-8">
-                <div class="col-md-8">
-                    <h2 class="heading fw-bold">
-                        THIS TRIP WILL TRANSFORM YOUR LIFE
+            <div class="col-md-8" style="margin-top: 80px;">
+
+                <h2 class="heading fw-bold" style="margin-left: 40px; margin-top: 60px;">
+                    THIS TRIP WILL TRANSFORM YOUR LIFE
                 </h2>
 
-                    <div class="tick">
-                        <p class="mb-0" style="padding: 10px; ; display: flex; align-items: center">
-                            <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px;"></i>
-                            <span style="margin-left: 10px; font-size: larger;">You want to earn a LOT MORE MONEY? Don’t you</span>
-                        </p>
-                        <p class="mb-0" style="padding: 10px;  display: flex; align-items: center;">
-                            <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px;"></i>
-                            <span style="margin-left: 10px; font-size: larger;"> Fun Filled cycle rickshaw ride, see the narrow silver
-                                street
-                                of Old Delhi.</span>
-                        </p>
-                        <p class="mb-0" style="padding: 10px;  display: flex; align-items: center;">
-                            <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px;"></i>
-                            <span style="margin-left: 10px; font-size: larger;"> Fun Filled cycle rickshaw ride, see the narrow silver
-                                street
-                                of Old Delhi.</span>
-                        </p>
-                    </div>
-
+                <div class="tick" ">
+                    <p class=" mb-0" style="margin-left: 30px; ; display: flex; align-items: center">
+                    <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px; color: #3B55A8;"></i>
+                    <span style="margin-left: 10px; font-size: larger;">You want to earn a LOT MORE MONEY? Don’t
+                        you</span>
+                    </p>
+                    <p class="mb-0" style="margin-left: 30px;  display: flex; align-items: center;">
+                        <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px; font-size: larger;"> Fun Filled cycle rickshaw ride, see the
+                            narrow silver
+                            street
+                            of Old Delhi.</span>
+                    </p>
+                    <p class="mb-0" style="margin-left: 30px; display: flex; align-items: center;">
+                        <i class="ri-checkbox-circle-fill fs-2" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px; font-size: larger;"> Fun Filled cycle rickshaw ride, see the
+                            narrow silver
+                            street
+                            of Old Delhi.</span>
+                    </p>
                 </div>
-
             </div>
 
         </div>
@@ -264,105 +351,139 @@
 
         <div class="row">
             <div class="container2" style="height: 482px; background-color: #3B55A8; position: relative;">
-                <div style="position: relative;">
-                    <p style="font-family: Inter; color: #FFFFFF; font-size: x-large; margin-left: 50px;">
-                        THEN WHAT ARE YOU WAITING FOR? THIS TRIP IS JUST PERFECT FOR YOU!!
+                <div class="col-md-12">
+
+                    <p style="font-family: Inter; color: #FFFFFF; font-size: xx-large; margin-left: 143px;">
+                        THEN WHAT ARE YOU WAITING FOR? THIS TRIP IS JUST PERFECT FOR YOU!!.
                         <span style="font-size: medium; font-family: Raleway;"><br>What you will learn in this
                             trip</br></span>
                     </p>
-                    <span style="color: #FFFFFF; margin-left: 50px;"><i class="fa-thin fa-play"></i>
-                        <b>IMAGINE,</b> You are flooded with new opportunities & abundance of money.
-                    </span>
-                    <span style="color: #FFFFFF; margin-left: 50px;"><i class="fa-thin fa-play"></i>
-                        <br><b>IMAGINE</b> you have a vibrant health with disease free body and stressed free mind
-                    </span><br>
-                    <span style="color: #FFFFFF; margin-left: 50px;"><i class="fa-thin fa-play"></i>
-                        <b>IMAGINE</b> you have loving & gratifying relationships with everyone.
-                    </span>
+                    <div class="sub-container" style="margin-top: 75px;">
+                        <img src="images/arrow1.png" alt="Image Description" style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color:#FFFFFF; margin-left: 173px;">IMAGINE, You are flooded with
+                            new <br>opportunities & abundance of money.</p>
+                            <img src="images/arrow1.png" alt="Image Description" style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color: #FFFFFF;     margin-left: 173px;
+                        ">IMAGINE you have a vibrant health with <br> disease free
+                            body and stressed free mind</p>
+                            <img src="images/arrow1.png" alt="Image Description" style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color: #FFFFFF;     margin-left: 173px;
+                        ">IMAGINE you have loving & gratifying <br>relationships
+                            with everyone.</p>
+                    </div>
+
+
                 </div>
-                <div style="position: absolute; right: 75px; bottom: -100px;">
-                    <img src="images/image5.jpg" style="width: 720px; height: 376px;">
+
+                <div style="position: absolute; right: 75px; bottom: -100px; ">
+                    <img src="images/image5.jpg" style="width: 720px; height: 376px; margin-bottom: 36px;">
                 </div>
             </div>
+            
         </div>
-
+        <div class="" style="margin-top: 100px;">
+            <div class="brief" style="text-align: center;margin: 32px; ">
+                <p style="font-size: 36px; font-weight: 400;">
+                    Let me tell YOU, this can come TRUE after attending the <br>
+                    <span style="margin-left: 15vh;"><b>Transformative Trip to India</b></span>
+                </p>
+            </div>
+        </div>
     </section>
     <section>
-        <div class="brief" style="text-align: center;margin: 32px;">
-            <p style="font-size: 36px; font-weight: 400;">
-                Let me tell YOU, this can come TRUE after attending the <br>
-                <span style="margin-left: 15vh;"><b>Transformative Trip to India</b></span>
-            </p>
-        </div>
+        
     </section>
     <section>
         <div class="slider">
-            <div class="row img">
-                <div class="col-md-3">
-                    <img src="images/image6.jpg" alt="Image 1">
-                </div>
-                <div class="col-md-3">
-                    <img src="images/image7.jpg" alt="Image 2">
-                </div>
-                <div class="col-md-3">
-                    <img src="images/image8.jpg" alt="Image 3">
-                </div>
-                <div class="col-md-3">
-                    <img src="images/image9.jpg" alt="Image 4">
-                </div>
-                <!-- <div class="col-md-3">
-                    <img src="images/image10.jpg" alt="Image 5" >
-                </div> -->
-            </div>
+            <img src="images/image6.jpg" alt="Image 1">
+            <img src="images/image7.jpg" alt="Image 2">
+            <img src="images/image8.jpg" alt="Image 3">
+            <img src="images/image9.jpg" alt="Image 4">
+            <img src="images/image10.jpg" alt="Image 5">
         </div>
 
     </section>
     <section>
         <div class="content">
-            <div class="row col-md-12">
-                <div class="col-md-5 d-flex">
-                    <div class="col-md-3" style="margin-left: 10vw;">
-                        <img src="./images/image17.png" class="img-fluid rounded custom-image1" alt="">
-                        <img src="images/image13.jpg" class="img-fluid rounded custom-image" alt="">
-                        <img src="./images/image17.png" class="img-fluid rounded custom-image1" alt="">
-                    </div>
-                    <div class="col-md-3" style="margin-left: 3vw;">
-                        <img src="images/image11.jpg" class="img-fluid rounded custom-image2" alt="">
-                        <img src="images/image12.jpg" class="img-fluid rounded custom-image2" alt="">
+            <div class="row col-md-12 p-4">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="position: relative; display: inline-block;">
+                                <img src="./images/image19.png" class="img-fluid rounded custom-image1"
+                                    style="margin-left: 120px;" alt="">
+                                <img src="images/image18.jpg"
+                                    style="position: absolute; top: 0; left: 0; width: 47px; height: 47px;" alt="">
+                            </div>
+
+
+                            <div style="position: relative; width: 100%; height: 250px; overflow: hidden;">
+                                <div
+                                    style="position: absolute; top: 0; left: 60px; width: 170px; height: 206px; background-image: url('images/image13.jpg'); background-size: cover; background-position: center;">
+                                </div>
+                            </div>
+                            <img src="./images/image17.png" class="img-fluid rounded custom-image1" alt=""
+                                style="margin-left: 120px; margin-top: -30px;">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div style="position: relative; width: 100%; height: 250px; overflow: hidden;">
+                                <div
+                                    style="position: absolute; top: 0; left: 20px; width: 170px; height: 206px; background-image: url('images/image11.jpg'); background-size: cover; background-position: center;">
+                                </div>
+                            </div>
+
+
+                            <div style="position: relative; width: 100%; height: 250px; overflow: hidden;">
+                                <div
+                                    style="position: absolute; top: 0 ; left:20px ; width: 170px; height: 206px; background-image: url('images/image12.jpg'); background-size: cover; background-position: center;">
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
+
+
                 <div class="col-md-4">
                     <h3 class="fs-2"> What you'll learn in this trip </h3>
                     <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
-                            of Old Delhi.</span>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;"> Learn the real causes of anxiety, stress, phobias and how to
+                            reduce them instantly</span>
                     </p>
                     <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
-                            of Old Delhi.</span>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;"> Learn how to unleash your full, unstoppable potential to
+                            create massive change in your own life… and in the lives of those around you</span>
                     </p>
                     <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
-                            of Old Delhi.</span>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;">Learn How to build a rapport with any one in 60 seconds or
+                            less</span>
                     </p>
                     <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
-                            of Old Delhi.</span>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;"> Learn how to make your yearly income to your monthly income by
+                            changing your money blueprints</span>
                     </p>
                     <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
-                            of Old Delhi.</span>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 1px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;"> Learn how to develop and maintain the mind-set necessary to
+                            achieve anything you can dream up</span>
+                    </p>
+                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="color: #3B55A8;"></i>
+                        <span style=" margin-left: 10px;"> You will get access a proven collection of potent clearing
+                            techniques that only a handful of people have ever seen - right at your fingertips</span>
                     </p>
 
                 </div>
-                <div class="col-md-3">
-                    <img src="./images/image17.png" class="img-fluid rounded custom-image1" alt="">
-                    <img src="images/image14.jpg" alt="" style="width: 204px; height: 250px;">
+                <div class="col-md-4">
+                    <img src="./images/image19.png" class="img-fluid rounded custom-image1" alt="">
+                    <img src="images/image14.jpg" alt="" style="width: 274px; height: 270px; padding-left: 70px;">
                 </div>
             </div>
         </div>
@@ -391,46 +512,46 @@
         </div>
     </section>
     <section>
-        <div class="row" style="padding: 2vw 10vw 0 10vw;">
+        <div class="row" style="padding: 0vw 5vw 0 10vw; margin: 45px;">
             <div>
                 <h1 class="fw-bold">What you'll get in this trip </h1>
             </div>
             <div class="container col-md-12 row"
                 style=" border-radius: 4vw; height: auto; box-shadow: 0px 2px 10px 2px grey;">
                 <div class="col-md-6">
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; "></i>
                         <span style="margin-left: 10px;">Round trip airport transfers, no matter what
                             time you arrive or how delayed your flight is, our
                             friendly driver will be there with a smiling face.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px; display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">06 night’s stay in elegant 5 star hotels, so that you have a
                             comfortable stay and a sound sleep</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Daily Lavish buffet breakfast, get a refreshing start of the
                             day</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
-                        <span style="margin-left: 10px;">5 Lunches and 5 dinners Fresh & Lip smacking delectable variety
-                            of Indian Cuisine</span>
-                    </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px; display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>fun fi</i>
                         <span style="margin-left: 10px;">Intercity travel by comfortable, safe & modern
                             transport.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Entry tickets to all monuments, no need to stand in long
                             queues.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
+                        <span style="margin-left: 10px;">5 Lunches and 5 dinners Fresh & Lip smacking delectable variety
+                            of Indian Cuisine</span>
+                    </p>
+                    <p class="mb-0" style="padding: 20px; display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Experienced, Knowledgeable, friendly English speaking guides,
                             Friendliest guides you would have ever met. Listen the interesting stories.</span>
                     </p>
@@ -438,34 +559,34 @@
 
                 </div>
                 <div class="col-md-6">
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;"> Fun Filled cycle rickshaw ride, see the narrow silver street
                             of Old Delhi.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Unlimited bottled water in the bus, so that you are hydrated on
                             the tour.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Visit Taj Mahal at sunrise (tickets included), Taj Mahal looks
                             more beautiful at sunrise, Take better pictures, selfies of Taj Mahal and its less
                             crowded.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Free time for shopping, Explore the world-famous market, Jaipur
                             for the finest jewellery and precious stones.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Meditation Sessions, Relax your mind and make it calm to
                             achieve a sound mental health.</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px;"></i>
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Transformative sessions, transform your life completely, Learn
                             how to eliminate stress, anxiety, phobia and remove your mental blocks to achieve
                             success</span>
@@ -475,21 +596,173 @@
             </div>
         </div>
     </section>
-    <section>
+    <section style="margin-top: 50px; margin-bottom: 45px;">
         <div class="container3">
-            <h2 class="fw-bold" style="padding: 25px;"">What our Clients say about us</h2>
+            <h2 class="fw-bold" style="padding: 25px;">What our Clients say about us</h2>
         </div>
     </section>
+
     <section>
-        <div class=" row">
-                <div class="container4" style="color: #3B55A8;">
-                    <div class="col-md-3">
+
+        <div class="container-4 col-md-12">
+            <div class="row"
+                style="background-color: #3B55A8; width: auto; height: 453px; padding: 0px 190px; align-items: center;">
+                <div class="col-md-3"
+                    style=" background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+                    <div
+                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                        <img src="images/like1.png" alt="Like"
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                        <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
+                    </div>
+
+                    <div
+                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        <h4 style="margin: 0; white-space: nowrap; width: 152px;  ">Lindsey Warren</h4>
+                        <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
+                            Expedia CruiseShipCenters</h6>
+                    </div>
+
+                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                        <h2 style="font-size: medium;">"Culture Holidays and it was <br><span style="display: inline-block; margin-left: 1ch;">unbelievable!"</span></h2>
+
+                        <p style="font-size: small;">We just finished a week long trip around the
+                            Golden Triangle with Culture Holidays and it was unbelievable! Everything was well-organized
+                            and went smoothly. Our guide was spectacular. He is so knowledgeable about all the places we
+                            visited and we learned so much. We had a truly amazing time and Culture Holidays is able to
+                            do a personalized tour for whatever you need for your time in India. Amazing. I want to come
+                            back!</p>
+
+                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                        </div>
 
                     </div>
 
                 </div>
 
-        </div>
+                <div class="col-md-3"
+                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+
+                    <div
+                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                        <img src="images/like1.png" alt="Like"
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                        <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
+                    </div>
+
+                    <div
+                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        <h4 style="margin: 0; white-space: nowrap;">Kimberly Ann Figueroa</h4>
+                        <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
+                            Expedia CruiseShipCenters</h6>
+                    </div>
+                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                        <h2 style="font-size: medium;">"We definitely learned so much<br><span style="display: inline-block; margin-left: 1ch;">about the Indian culture "</span></h2>
+
+
+                        <p style="font-size: small;">We just finished a week long trip around the
+                            Golden Triangle with Culture Holidays and it was unbelievable! Everything was well-organized
+                            and went smoothly. Our guide was spectacular. He is so knowledgeable about all the places we
+                            visited and we learned so much. We had a truly amazing time and Culture Holidays is able to
+                            do a personalized tour for whatever you need for your time in India. Amazing. I want to come
+                            back!</p>
+
+                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3"
+                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+                    <div
+                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                        <img src="images/like1.png" alt="Like"
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                        <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
+                    </div>
+
+                    <div
+                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        <h4 style="margin: 0; white-space: nowrap; ">Nikki McGregory</h4>
+                        <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
+                            Expedia CruiseShipCenters</h6>
+                    </div>
+
+                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                        <h2 style="font-size: medium; width: 200px;">" The staff w​as absolutely " <br><span style="display: inline-block; margin-left: 1ch;"> amazing"</span></h2>
+
+                        <p style="font-size: small;">We just finished a week long trip around the
+                            Golden Triangle with Culture Holidays and it was unbelievable! Everything was well-organized
+                            and went smoothly. Our guide was spectacular. He is so knowledgeable about all the places we
+                            visited and we learned so much. We had a truly amazing time and Culture Holidays is able to
+                            do a personalized tour for whatever you need for your time in India. Amazing. I want to come
+                            back!</p>
+
+                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3"
+                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+
+                    <div
+                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                        <img src="images/like1.png" alt="Like"
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                        <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
+                    </div>
+
+                    <div
+                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        <h4 style="margin: 0; white-space: nowrap;">Lindsey Warren</h4>
+                        <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Nik of Time Travel,
+                            Owner</h6>
+                    </div>
+
+                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                        <h2 style="font-size: medium; width: 200px;">" I highly recommend <br><span style="display: inline-block; margin-left: 1ch;">Culture Holidays"</span></h2>
+
+
+                        <p style="font-size: small;">We just finished a week long trip around the
+                            Golden Triangle with Culture Holidays and it was unbelievable! Everything was well-organized
+                            and went smoothly. Our guide was spectacular. He is so knowledgeable about all the places we
+                            visited and we learned so much. We had a truly amazing time and Culture Holidays is able to
+                            do a personalized tour for whatever you need for your time in India. Amazing. I want to come
+                            back!</p>
+
+                        <!-- Star Ratings -->
+                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                            <span style="color: #4B70E2; font-size: 24px;">★</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
     </section>
 </body>
 

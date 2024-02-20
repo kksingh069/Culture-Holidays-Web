@@ -84,10 +84,186 @@
             padding: 20px;
             font-family: Playfair Display;
         }
-        
+
+        .room-container {
+            width: 100%;
+        }
+
+        .room-container {
+            border: 2px dotted #9D9D9D;
+            height: auto;
+        }
+
+
+        .row {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .left-content {
+            margin-right: 20px;
+            background-color: #00A0AE;
+            width: 192px;
+
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guests {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guest {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin: 20px;
+        }
+
+        .guest p {
+            font-weight: bold;
+            font-size: larger;
+            margin-right: 10px;
+        }
+
+        .tables {
+            margin-left: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            /* Two columns */
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+            padding: 10px;
+            border: 2px dotted lightgray;
+            /* Set border to dotted and light gray */
+            width: 260px;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+
+        .first-name,
+        .last-name {
+            font-weight: lighter;
+        }
+
+        .occupancy {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            margin-bottom: 10px;
+        }
+
+        .occupancy p {
+            font-weight: bolder;
+            margin: 0;
+            margin-right: 10px;
+            margin-bottom: 39px
+        }
+
+        .occupancy span {
+            margin: 0;
+            margin-bottom: 39px
+        }
+
+        .guest-tables-container {
+            position: absolute;
+            left: 0;
+            width: 300px;
+            /* Adjust width as needed */
+            margin-top: 30px;
+            
+        }
+
+
+        .tables {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .grid-item {
+            padding: 10px;
+            border: 2px solid gray;
+            width: 280px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .dropdowns-container {
+            display: inline-block;
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .room-section {
+            width: 95vh;
+            height: 180px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .travelers-dropdown {
+            margin-top: 10px;
+            position: absolute;
+            /* Add position absolute */
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .travelers-dropdown label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .travelers-dropdown select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        .guest-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .guest-table th,
+        .guest-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            /* text-align: left; */
+        }
+
+        .guest-table th {
+            background-color: #f2f2f2;
+        }
+
+        .guest-table-container .guest-table {
+            flex: 1;
+            /* margin-right: 10px; */
+            /* margin-left: auto; */
+        }
     </style>
-
-
 
 </head>
 
@@ -97,8 +273,8 @@
         style="background:url(images/hotb-Copy.jpg); background-size: cover; background-position: center;height: 300px;">
     </section>
     <section>
-        <div class="Container">
-            <div class="row">
+        <div class="Container px-4">
+            <div class="row ">
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4">
@@ -118,20 +294,23 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-col-12">
-                            <div class="top-head">
+                        <div class="col-md-12">
+                            <div class="col-md-8">
+                                <div class="top-head">
 
-                                <p class="mb-0"> <i class="bi bi-check"
-                                        style="background: #fff;border-radius: 50%;padding: 0px 3px;"></i> Nice Job! You
-                                    picked one of our best tours, 20k people have already booked this tour.</p>
-                            </div>
-                            <div class="bottom-head">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3>Tour Details </h3>
-                                    </div>
-                                    <div class="col-md-6 text-align-right">
-                                        <span>Magnificent Trip Of India</span> <span> 50 % OFF</span>
+                                    <p class="mb-0"> <i class="bi bi-check"
+                                            style="background: #fff;border-radius: 50%;padding: 0px 3px;"></i> Nice Job!
+                                        You
+                                        picked one of our best tours, 20k people have already booked this tour.</p>
+                                </div>
+                                <div class="bottom-head">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h3>Tour Details </h3>
+                                        </div>
+                                        <div class="col-md-6 text-align-right">
+                                            <span>Magnificent Trip Of India</span> <span> 50 % OFF</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,13 +320,13 @@
 
                     <div class="row">
                         <div class="col-md-4">
-                            <p class="mt-3 mb-4">Trip Duration <span>: 6 Nights 7 Days</span></p>
+                            <p class="mt-3 mb-4 "><strong>Trip Durations</strong> <span>: 6 Nights 7 Days</span></p>
                         </div>
                         <div class="col-md-4">
-                            <p class="mt-3 mb-4"> Tour Starts <span>: Jan 15 2024, Delhi</span></p>
+                            <p class="mt-3 mb-4"> <strong>Tour Starts</strong> <span>: Jan 15 2024, Delhi</span></p>
                         </div>
                         <div class="col-md-4">
-                            <p class="mt-3 mb-4">Tour Ends <span>: Jan 22 2024, Agra</span></p>
+                            <p class="mt-3 mb-4"><strong>Tour Ends</strong> <span>: Jan 22 2024, Agra</span></p>
                         </div>
                     </div>
 
@@ -208,68 +387,159 @@
                                         <h2>Add Travelers</h2>
 
                                     </div>
-                                    <div class="col-md-3">
-                                        <h4>Total
-                                            travelers</h4>
 
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dropdowns-container">
+                                    <!-- Guest dropdown -->
+                                    <div class="dropdown" style="display: inline-block;">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            id="guestDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                            style="background-color: #FFFFFF; color: #545454;">
+                                            Select Number of Guests
+                                        </a>
+
+                                        <!-- Dropdown Menu for selecting number of guests -->
+                                        <ul class="dropdown-menu" aria-labelledby="guestDropdownMenuLink"
+                                            id="guestDropdownMenu">
+                                            <li><a class="dropdown-item" href="#" onclick="showGuestOptions(0)">0</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showGuestOptions(1)">1</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showGuestOptions(2)">2</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showGuestOptions(3)">3</a>
+                                            </li>
+                                        </ul>
                                     </div>
 
-                                    <div class="col-md-4">
-                                        <div class="dropdown">
-                                            <a class="btn btn-secondary dropdown-toggle " href="#" role="button"
-                                                id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-                                                style="background-color: #FFFFFF; color: #545454;">
-                                                Select No of Rooms
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#">1</a></li>
-                                                <li><a class="dropdown-item" href="#">2</a></li>
-                                                <li><a class="dropdown-item" href="#">3</a></li>
-                                            </ul>
+                                    <!-- Room dropdown -->
+                                    <div class="dropdown" style="display: inline-block;">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                            id="roomDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+                                            style="background-color: #FFFFFF; color: #545454;">
+                                            Select No of Rooms
+                                        </a>
+
+                                        <!-- Dropdown Menu for selecting number of rooms -->
+                                        <ul class="dropdown-menu" aria-labelledby="roomDropdownMenuLink"
+                                            id="roomDropdownMenu">
+                                            <li><a class="dropdown-item" href="#" onclick="showRoomDropdown(0)">0</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showRoomDropdown(1)">1</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showRoomDropdown(2)">2</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#" onclick="showRoomDropdown(3)">3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="roomOptionsContainer"></div>
+
+
+
+                            </div>
+                        </div>
+                        <!-- <div class="room-container">
+                            <div class="row">
+                                <div class="left-content">
+                                    <h4>Room 1</h4>
+                                </div>
+                                <div class="center-content">
+                                    <h4> Add Guest
+                                        <span class="minus-icon">-</span>
+                                        <span class="guest-number">03</span>
+                                        <span class="plus-icon">+</span>
+                                    </h4>
+                                </div>
+
+                                <div class="guests">
+                                    <div class="guest">
+                                        <p>Guest 1: </p>
+                                        <div class="tables">
+                                            <div class="grid">
+                                                <div class="grid-item first-name">Enter First Name</div>
+                                                <div class="grid-item last-name">Enter Last Name</div>
+                                            </div>
                                         </div>
                                     </div>
-
+                                    <div class="guest">
+                                        <p>Guest 2:</p>
+                                        <div class="tables">
+                                            <div class="grid">
+                                                <div class="grid-item first-name">Enter First Name</div>
+                                                <div class="grid-item last-name">Enter Last Name</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="guest">
+                                        <p>Guest 3:</p>
+                                        <div class="tables">
+                                            <div class="grid">
+                                                <div class="grid-item first-name">Enter First Name</div>
+                                                <div class="grid-item last-name">Enter Last Name</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-5">
-
-                                    <h2
-                                        style="background-color: #00A0AE; color: #FFFFFF; width: 192px; height: 50px; text-align: center;">
-                                        Room 1
-                                    </h2>
-
-                                </div>
-                                <div class="col-md-3">
-
-                                    <h4 style="color: #00A0AE; ">
-                                        Add
-                                        Guest
-                                    </h4>
-
-
-                                </div>
-                                <div class="col-md-4" style="display: flex; align-items: center;">
-                                    <i class="bi bi-dash-square" style="margin-right: 10px; width: 20px; height: 20px;"></i>
-                                    <h2 class="plus-minus-shape" style="color: #9D9D9D; font-weight: 600; margin: 0 10px;">03</h2>
-                                    <i class="bi bi-file-plus" style="margin-left: 10px;"></i>
-                                </div>
-                                
-                                
-
-
 
                             </div>
-                        </div>
+                            <div class="occupancy">
+                                <p>Select your occupancy preference:</p>
+                                <span>Double Occupancy</span>
+                            </div>
+                            <div class="occupancy-images">
+                                <div class="image-1">
+                                    <div class="occupancy-image-1">
+                                        <img src="images/room.jpg" alt="Single Occupancy">
+                                        <div class="occupancy-text-1">DOUBLE OCCUPANCY</div>
+                                        <div class="price-text">
+                                            <span class="price-amount">$999</span>
+                                            <span class="per-person">per person</span>
+                                        </div>
 
-                        <div class="col-md-4">
+                                    </div>
+                                </div>
+                                <div class="image-2">
+                                    <div class="occupancy-image-2">
+                                        <img src="images/room2.png" alt="Single Occupancy">
+                                        <div class="occupancy-text-2">SINGLE OCCUPANCY</div>
+                                        <div class="price-text">
+                                            <span class="price-amount">$1246</span>
+                                            <span class="per-person">per person</span>
+                                        </div>
 
-                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="image-3">
+                                <div class="occupancy-image">
+                                    <img src="images/room.jpg" alt="Triple Occupancy">
+                                    <div class="occupancy-text">Triple Occupancy</div>
+                                    <div class="price-text">
+                                        <span class="price-amount">$1246</span>
+                                        <span class="per-person">per person</span>
+                                    </div>
+
+                                </div> 
+                            </div> -->
                     </div>
+
+
                 </div>
+
+
+
+
+                <div class="col-md-4">
+                    <h1>Booking Summary</h1>
+                </div>
+            </div>
+        </div>
     </section>
 
 

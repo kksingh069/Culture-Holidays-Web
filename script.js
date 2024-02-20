@@ -20,13 +20,13 @@ $(document).ready(function() {
       }
     }
 
-    // Function to add tabs
+    
     function addTabs() {
       numTabs++;
       updateTabContent();
     }
 
-    // Function to remove tabs
+   
     function removeTabs() {
       if (numTabs > 1) {
         numTabs--;
@@ -48,15 +48,64 @@ $(document).ready(function() {
       updateTabContent();
     });
   });
-  var myCarousel = document.querySelector('#myCarousel')
-var carousel = new bootstrap.Carousel(myCarousel)
-var myCarousel = document.querySelector('#myCarousel')
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 2000,
-  wrap: false
-})
-var myCarousel = document.getElementById('myCarousel')
 
-myCarousel.addEventListener('slide.bs.carousel', function () {
-  // do something...
-})
+//   function showGuestOptions(guests) {
+//     document.getElementById('guestDropdownMenuLink').innerText = "Select Number of Guests: " + guests;
+// }
+
+function showRoomDropdown(rooms) {
+  document.getElementById('roomDropdownMenuLink').innerText = "Select No of Rooms: " + rooms;
+
+  var roomOptions = document.getElementById('roomOptionsContainer');
+  roomOptions.innerHTML = '';
+
+  for (let i = 1; i <= rooms; i++) {
+      var roomSection = document.createElement('div');
+      roomSection.className = 'room-section';
+      roomSection.innerHTML = `
+          <h4>Room ${i}</h4>
+          <div class="travelers-dropdown">
+              <label for="numTravelersRoom${i}">Number of Travelers:</label>
+              <select id="numTravelersRoom${i}" name="numTravelersRoom${i}" onchange="showGuestTables(${i}, this.value)">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <!-- Add more options as needed -->
+              </select>
+          </div>
+          <div id="guestTablesRoom${i}"></div>
+          <p>Room details here</p>`;
+      roomOptions.appendChild(roomSection);
+  }
+}
+function showGuestTables(room, numTravelers) {
+  var guestTablesContainer = document.getElementById(`guestTablesRoom${room}`);
+  var dropDownContainer = document.getElementById(`numTravelersContainer${room}`);
+  guestTablesContainer.innerHTML = '';
+
+  if (numTravelers > 0) {
+      for (let j = 1; j <= numTravelers; j++) {
+          var guestTable = document.createElement('div');
+          guestTable.className = 'guest-table-container';
+          guestTable.innerHTML = `
+              <table class="guest-table">
+                  <tr>
+                      <th colspan="2">Guest ${j}</th>
+                  </tr>
+                  <tr>
+                      <td><input type="text" id="firstNameRoom${room}_${j}" placeholder="First Name"></td>
+                      <td><input type="text" id="lastNameRoom${room}_${j}" placeholder="Last Name"></td>
+                  </tr>
+              </table>`;
+          guestTablesContainer.appendChild(guestTable);
+      }
+  }
+  
+  // Insert guestTablesContainer after dropDownContainer
+  dropDownContainer.parentNode.insertBefore(guestTablesContainer, dropDownContainer.nextSibling);
+}
+
+
+
+
