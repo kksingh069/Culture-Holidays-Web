@@ -79,12 +79,43 @@ function showRoomDropdown(rooms) {
       roomOptions.appendChild(roomSection);
   }
 }
-function showGuestTables(room, numTravelers) {
+var guestNames = {};
+
+// Function to update stored guest names when input fields change
+function updateGuestNames(room, id, value) {
+    if (!guestNames[room]) {
+        guestNames[room] = {};
+    }
+    guestNames[room][id] = value;
+}
+
+function showGuestTables(room, numTravelers, event) {
+  if (event) {
+      event.preventDefault();
+  }
+
   var guestTablesContainer = document.getElementById(`guestTablesRoom${room}`);
-  var dropDownContainer = document.getElementById(`numTravelersContainer${room}`);
+  var dropDownContainer = document.getElementById(`numTravelersRoom${room}`);
   guestTablesContainer.innerHTML = '';
 
   if (numTravelers > 0) {
+      var totalHeight = numTravelers * 60; 
+      
+      guestTablesContainer.style.height = totalHeight + 'px';
+
+      var occupancySelect = document.createElement('select');
+      occupancySelect.innerHTML = `
+          <option value="single">Single Occupancy</option>
+          <option value="double">Double Occupancy</option>
+          <option value="triple">Triple Occupancy</option>
+      `;
+      occupancySelect.addEventListener('change', function () {
+          var selectedOption = this.value;
+          console.log('Selected occupancy:', selectedOption);
+      });
+
+      guestTablesContainer.appendChild(occupancySelect);
+
       for (let j = 1; j <= numTravelers; j++) {
           var guestTable = document.createElement('div');
           guestTable.className = 'guest-table-container';
@@ -100,11 +131,76 @@ function showGuestTables(room, numTravelers) {
               </table>`;
           guestTablesContainer.appendChild(guestTable);
       }
+  } else {
+      guestTablesContainer.style.height = '0';
   }
-  
-  // Insert guestTablesContainer after dropDownContainer
+
   dropDownContainer.parentNode.insertBefore(guestTablesContainer, dropDownContainer.nextSibling);
 }
+function showGuestTables(room, numTravelers, event) {
+  if (event) {
+      event.preventDefault();
+  }
+
+  var guestTablesContainer = document.getElementById(`guestTablesRoom${room}`);
+  var roomSection = document.querySelector(`#guestTablesRoom${room}`).closest('.room-section');
+
+  var existingValues = {};
+  guestTablesContainer.querySelectorAll('input[type="text"]').forEach(input => {
+      existingValues[input.id] = input.value;
+  });
+
+  guestTablesContainer.innerHTML = '';
+
+  var rowHeight = 50; 
+  var guestNames = {}; 
+
+  if (numTravelers > 0) {
+      for (let j = 1; j <= numTravelers; j++) {
+          var guestTable = document.createElement('div');
+          guestTable.className = 'guest-table-container';
+          guestTable.innerHTML = `
+              <table class="guest-table">
+                  <tr>
+                      <th colspan="2">Guest ${j}</th>
+                  </tr>
+                  <tr>
+                      <td><input type="text" id="firstNameRoom${room}_${j}" placeholder="First Name" value="${existingValues[`firstNameRoom${room}_${j}`] || ''}"></td>
+                      <td><input type="text" id="lastNameRoom${room}_${j}" placeholder="Last Name" value="${existingValues[`lastNameRoom${room}_${j}`] || ''}"></td>
+                  </tr>
+              </table>`;
+          guestTablesContainer.appendChild(guestTable);
+      }
+  }
+
+  var totalHeight = numTravelers * rowHeight;
+
+  roomSection.style.height = totalHeight + 'px';
+
+  guestTablesContainer.addEventListener('input', function(event) {
+      var input = event.target;
+      if (input.tagName === 'INPUT' && input.type === 'text') {
+          var [, roomNum, guestIndex] = input.id.match(/firstNameRoom(\d+)_(\d+)/);
+          saveGuestNames(roomNum, guestIndex, input.id.includes('firstName') ? 'firstName' : 'lastName', input.value);
+      }
+  });
+
+  function saveGuestNames(room, guestIndex, type, value) {
+      if (!guestNames[room]) {
+          guestNames[room] = {};
+      }
+      if (!guestNames[room][guestIndex]) {
+          guestNames[room][guestIndex] = {};
+      }
+      guestNames[room][guestIndex][type] = value;
+      console.log(guestNames); // Check if names are correctly saved
+  }
+}
+
+
+
+
+
 
 
 

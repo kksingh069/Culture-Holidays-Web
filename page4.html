@@ -55,8 +55,6 @@
             text-align: right;
         }
 
-
-
         .hotel-wrapper .card {
             background-color: #F3F3F3;
             padding: 10px;
@@ -182,7 +180,7 @@
             width: 300px;
             /* Adjust width as needed */
             margin-top: 30px;
-            
+
         }
 
 
@@ -212,7 +210,7 @@
 
         .room-section {
             width: 95vh;
-            height: 180px;
+            height: auto;
             border: 1px solid #ccc;
             margin: 10px;
             padding: 10px;
@@ -221,16 +219,18 @@
         }
 
         .travelers-dropdown {
-            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             position: absolute;
-            /* Add position absolute */
-            bottom: 10px;
-            left: 10px;
+            top: 0;
+            right: 0;
         }
 
         .travelers-dropdown label {
             display: block;
             margin-bottom: 5px;
+            white-space: nowrap;
         }
 
         .travelers-dropdown select {
@@ -260,14 +260,13 @@
 
         .guest-table-container .guest-table {
             flex: 1;
-            /* margin-right: 10px; */
-            /* margin-left: auto; */
         }
     </style>
 
 </head>
 
 <body>
+
 
     <section
         style="background:url(images/hotb-Copy.jpg); background-size: cover; background-position: center;height: 300px;">
@@ -393,15 +392,12 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="dropdowns-container">
-                                    <!-- Guest dropdown -->
                                     <div class="dropdown" style="display: inline-block;">
                                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                             id="guestDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
                                             style="background-color: #FFFFFF; color: #545454;">
                                             Select Number of Guests
                                         </a>
-
-                                        <!-- Dropdown Menu for selecting number of guests -->
                                         <ul class="dropdown-menu" aria-labelledby="guestDropdownMenuLink"
                                             id="guestDropdownMenu">
                                             <li><a class="dropdown-item" href="#" onclick="showGuestOptions(0)">0</a>
@@ -415,7 +411,6 @@
                                         </ul>
                                     </div>
 
-                                    <!-- Room dropdown -->
                                     <div class="dropdown" style="display: inline-block;">
                                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
                                             id="roomDropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
@@ -423,7 +418,6 @@
                                             Select No of Rooms
                                         </a>
 
-                                        <!-- Dropdown Menu for selecting number of rooms -->
                                         <ul class="dropdown-menu" aria-labelledby="roomDropdownMenuLink"
                                             id="roomDropdownMenu">
                                             <li><a class="dropdown-item" href="#" onclick="showRoomDropdown(0)">0</a>
@@ -438,11 +432,13 @@
                                     </div>
                                 </div>
 
+
                                 <div id="roomOptionsContainer"></div>
 
 
 
                             </div>
+
                         </div>
                         <!-- <div class="room-container">
                             <div class="row">
