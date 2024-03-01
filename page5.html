@@ -89,7 +89,7 @@
         }
 
         .container-2 img {
-            position: absolute;
+
             width: 619px;
             height: 422px;
             margin-top: 10vh;
@@ -122,7 +122,6 @@
 
         .slider img:last-child {
             margin-right: 0;
-            /* Remove gap for the last image */
         }
 
         .dot {
@@ -161,9 +160,23 @@
 
         }
 
-        .col-md-3:hover {
-            transform: scale(1.1);
+        .card {
+            width: 100%;
         }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* @media (max-width: 576px) {
+            .col-xs-12 {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        } */
     </style>
 
 </head>
@@ -177,11 +190,11 @@
 
                 </div>
                 <div class="col-md-4">
-                    <div class="row">
+                    <div class="row justify-content-end">
                         <div class="card"
-                            style="opacity: 1; color: white; width: 394px; height: 500px; margin-top: 95px; ">
+                            style="opacity: 1; color: white; width: 394px; height: 500px; margin-top: 95px; position: relative; ">
                             <div class="small-card"
-                                style="background-color: #F2F2F2; position: absolute; top: 0; ; right: 0; height: 130px;">
+                                style="background-color: #F2F2F2; position: absolute; top: 0; right: 0; height: 130px;">
                                 <h1 style="color: #000000; margin: 10px; font-weight: bolder;">
                                     Transformative trip to India
                                     <div class="sub-class"
@@ -189,8 +202,6 @@
                                         <h6 style="font-size: x-small; text-align: center; padding: 5px;"><b>2k+</b>
                                             BOOKINGS DONE</h6>
                                     </div>
-
-
                                 </h1>
                             </div>
                             <div class="row" style="position: absolute; top: 120px; margin-right: 15px;">
@@ -276,7 +287,7 @@
 
 
                                 <div class="pricing" style="">
-                                    <span style="width: 164px; height: 25px; color: #676767;">
+                                    <span style="width: 164px; height: 25px; color: #676767; font-weight: bold;">
                                         PRICES STARTING FROM
                                     </span>
                                     <span
@@ -305,11 +316,11 @@
 
         </div>
     </section>
-    <section>
+    <section class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="second-part"
-                    style="margin-left: 45px; width: 457px; height: 384px; overflow: hidden; margin-top: 75px;">
+                    style="margin-left: 45px; width: auto; height: 384px; overflow: hidden; margin-top: 75px;">
                     <img src="images/image4.jpg" alt="Image" style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
 
@@ -347,43 +358,53 @@
 
         </div>
     </section>
-    <section>
+    <section style="height: 70vh; background-color: #3B55A8; position: relative; padding: 25px; ">
 
-        <div class="row">
-            <div class="container2" style="height: 482px; background-color: #3B55A8; position: relative;">
-                <div class="col-md-12">
+        <div class="container">
+            <div class="row">
 
-                    <p style="font-family: Inter; color: #FFFFFF; font-size: xx-large; margin-left: 143px;">
+
+                <div class="col-md-6">
+                    <p style="font-family: Inter; color: #FFFFFF; font-size: xx-large;  position: relative;">
                         THEN WHAT ARE YOU WAITING FOR? THIS TRIP IS JUST PERFECT FOR YOU!!.
-                        <span style="font-size: medium; font-family: Raleway;"><br>What you will learn in this
+                        <span style="font-size: 20px; font-family: Raleway; padding: 25px;"><br>What you will learn
+                            in
+                            this
                             trip</br></span>
                     </p>
-                    <div class="sub-container" style="margin-top: 75px;">
+                    <div class="sub-container" style="margin-top: 25px;">
                         <img src="images/arrow1.png" alt="Image Description"
-                            style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
-                        <p class="fs-5 mt-3" style="color:#FFFFFF; margin-left: 173px;">IMAGINE, You are flooded with
+                            style="float: left;  width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color:#FFFFFF; ">IMAGINE, You are flooded
+                            with
                             new <br>opportunities & abundance of money.</p>
                         <img src="images/arrow1.png" alt="Image Description"
-                            style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
-                        <p class="fs-5 mt-3" style="color: #FFFFFF;     margin-left: 173px;
-                        ">IMAGINE you have a vibrant health with <br> disease free
+                            style="float: left;  width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color: #FFFFFF;    
+                            ">IMAGINE you have a vibrant health with <br> disease free
                             body and stressed free mind</p>
                         <img src="images/arrow1.png" alt="Image Description"
-                            style="float: left; margin-left: 140px; width: 28px; height: 36.24px;">
-                        <p class="fs-5 mt-3" style="color: #FFFFFF;     margin-left: 173px;
-                        ">IMAGINE you have loving & gratifying <br>relationships
+                            style="float: left;  width: 28px; height: 36.24px;">
+                        <p class="fs-5 mt-3" style="color: #FFFFFF;     
+                            ">IMAGINE you have loving & gratifying <br>relationships
                             with everyone.</p>
                     </div>
-
-
                 </div>
 
-                <div style="position: absolute; right: 75px; bottom: -100px; ">
-                    <img src="images/image5.jpg" style="width: 720px; height: 376px; margin-bottom: 36px;">
+
+                <div class="col-md-6">
+                    <div class="position-absolute bottom-0 end-0 mb-5">
+                        <img src="images/image5.jpg" class="w-100"
+                            style="max-width: 720px; height: auto; margin-right: 25px;">
+                    </div>
                 </div>
+
+
             </div>
-
         </div>
+
+    </section>
+    <section>
         <div class="" style="margin-top: 100px;">
             <div class="brief" style="text-align: center;margin: 32px; ">
                 <p style="font-size: 36px; font-weight: 400;">
@@ -393,19 +414,114 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="mb-3"> </h3>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
+                        data-bs-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3" href="#carouselExampleIndicators2" role="button"
+                        data-bs-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
 
-    </section>
-    <section>
-        <div class="slider">
-            <img src="images/image6.jpg" alt="Image 1">
-            <img src="images/image7.jpg" alt="Image 2">
-            <img src="images/image8.jpg" alt="Image 3">
-            <img src="images/image9.jpg" alt="Image 4">
-            <img src="images/image10.jpg" alt="Image 5">
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 1" src="images/image6.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 2" src="images/image7.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 3" src="images/image8.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 4" src="images/image9.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 5" src="images/image10.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <img class="img-fluid" alt="Image 5" src="images/image10.jpg">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Special title treatment</h4>
+                                                <p class="card-text">With supporting text below as a natural lead-in to
+                                                    additional content.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Add more carousel items as needed -->
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
+
+
+
     <section>
         <div class="content">
             <div class="row col-md-12 p-4">
@@ -450,34 +566,34 @@
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12">
                     <h3 class="fs-2"> What you'll learn in this trip </h3>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;"> Learn the real causes of anxiety, stress, phobias and how to
                             reduce them instantly</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;"> Learn how to unleash your full, unstoppable potential to
                             create massive change in your own life… and in the lives of those around you</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Learn How to build a rapport with any one in 60 seconds or
                             less</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;"> Learn how to make your yearly income to your monthly income by
                             changing your money blueprints</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="margin-top: 1px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;"> Learn how to develop and maintain the mind-set necessary to
                             achieve anything you can dream up</span>
                     </p>
-                    <p class="mb-0" style="padding: 20px; width: 30vw; display: flex; align-items: flex-start;">
+                    <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start; font-weight: 600;">
                         <i class="ri-checkbox-circle-fill" style="color: #3B55A8;"></i>
                         <span style=" margin-left: 10px;"> You will get access a proven collection of potent clearing
                             techniques that only a handful of people have ever seen - right at your fingertips</span>
@@ -515,15 +631,14 @@
         </div>
     </section>
     <section>
-        <div class="row" style="padding: 0vw 5vw 0 10vw; margin: 45px;">
+        <div class="row px-10" style="padding: 0vw 4vw 0 10vw; ">
             <div>
                 <h1 class="fw-bold">What you'll get in this trip </h1>
             </div>
-            <div class="container col-md-12 row"
-                style=" border-radius: 4vw; height: auto; box-shadow: 0px 2px 10px 2px grey;">
+            <div class="container col-md-12 row" style="  height: auto; box-shadow: 0px 2px 10px 2px grey;">
                 <div class="col-md-6">
                     <p class="mb-0" style="padding: 20px;  display: flex; align-items: flex-start;">
-                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; "></i>
+                        <i class="ri-checkbox-circle-fill" style="margin-top: 3px; color: #3B55A8;"></i>
                         <span style="margin-left: 10px;">Round trip airport transfers, no matter what
                             time you arrive or how delayed your flight is, our
                             friendly driver will be there with a smiling face.</span>
@@ -600,33 +715,30 @@
         </div>
     </section>
     <section style="margin-top: 50px; margin-bottom: 45px;">
-        <div class="container3">
+        <div>
             <h2 class="fw-bold" style="padding: 25px;">What our Clients say about us</h2>
         </div>
     </section>
 
-    <section>
-
-        <div class="container-4 col-md-12">
-            <div class="row"
-                style="background-color: #3B55A8; width: auto; height: 453px; padding: 0px 190px; align-items: center;">
+    <section style="background-color: #3B55A8;  align-items: center;">
+        <div class=" container">
+            <div class="row gap-1">
                 <div class="col-md-3"
-                    style=" background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
-                    <div
-                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                    style=" background-color: white;  height: 500px;  display: flex; flex-direction: column; align-items: center;  background-position: center;  transition: transform 0.3s; ">
+                    <div style=" background-color: white; margin-bottom: 24.6px; position: relative;">
                         <img src="images/like1.png" alt="Like"
                             style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
                         <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
                     </div>
 
                     <div
-                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        style="height: 53.77px;  display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
                         <h4 style="margin: 0; white-space: nowrap; width: 152px;  ">Lindsey Warren</h4>
                         <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
                             Expedia CruiseShipCenters</h6>
                     </div>
 
-                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                    <div style="height: 313px;  word-break: break-all;">
                         <h2 style="font-size: medium;">"Culture Holidays and it was <br><span
                                 style="display: inline-block; margin-left: 1ch;">unbelievable!"</span></h2>
 
@@ -637,7 +749,7 @@
                             do a personalized tour for whatever you need for your time in India. Amazing. I want to come
                             back!</p>
 
-                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                        <div style="height: 15%; display: flex; align-items: center; margin-left: 25px;">
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
@@ -650,22 +762,21 @@
                 </div>
 
                 <div class="col-md-3"
-                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+                    style="background-color: white;  height: 500px;  display: flex; flex-direction: column; align-items: center;  background-position: center;  ">
 
-                    <div
-                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                    <div style="height: 22.48px;  background-color: white; margin-bottom: 24.6px; position: relative;">
                         <img src="images/like1.png" alt="Like"
-                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%);  height: 17.24px;">
                         <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
                     </div>
 
                     <div
-                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        style="height: 53.77px;  display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
                         <h4 style="margin: 0; white-space: nowrap;">Kimberly Ann Figueroa</h4>
                         <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
                             Expedia CruiseShipCenters</h6>
                     </div>
-                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                    <div style="height: 313px;  word-break: break-all;">
                         <h2 style="font-size: medium;">"We definitely learned so much<br><span
                                 style="display: inline-block; margin-left: 1ch;">about the Indian culture "</span></h2>
 
@@ -677,7 +788,7 @@
                             do a personalized tour for whatever you need for your time in India. Amazing. I want to come
                             back!</p>
 
-                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                        <div style="height: 15%; display: flex; align-items: center; margin-left: 25px;">
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
@@ -689,22 +800,21 @@
 
                 </div>
                 <div class="col-md-3"
-                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
-                    <div
-                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                    style="background-color: white;  height: 500px;  display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; ">
+                    <div style="height: 22.48px;  background-color: white; margin-bottom: 24.6px; position: relative;">
                         <img src="images/like1.png" alt="Like"
-                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 17.24px;">
                         <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
                     </div>
 
                     <div
-                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        style="height: 53.77px;  display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
                         <h4 style="margin: 0; white-space: nowrap; ">Nikki McGregory</h4>
                         <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Cruise Consultant,
                             Expedia CruiseShipCenters</h6>
                     </div>
 
-                    <div style="height: 313px; width: 230px; word-break: break-all;">
+                    <div style="height: 313px;  word-break: break-all;">
                         <h2 style="font-size: medium; width: 200px;">" The staff w​as absolutely " <br><span
                                 style="display: inline-block; margin-left: 1ch;"> amazing"</span></h2>
 
@@ -715,7 +825,7 @@
                             do a personalized tour for whatever you need for your time in India. Amazing. I want to come
                             back!</p>
 
-                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                        <div style="height: 15%; display: flex; align-items: center; margin-left: 25px;">
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
@@ -727,24 +837,23 @@
 
                 </div>
                 <div class="col-md-3"
-                    style="background-color: white; width: 268px; height: 600px; margin-right: 20px; display: flex; flex-direction: column; align-items: center;  background-position: center; overflow: hidden; transition: transform 0.3s; box-shadow: 0px 10px 10px 2px black;">
+                    style="background-color: white;  height: 500px;  display: flex; flex-direction: column; align-items: center;  background-position: center;  ">
 
-                    <div
-                        style="height: 22.48px; width: 91.11px; background-color: white; margin-bottom: 24.6px; position: relative;">
+                    <div style="height: 22.48px;  background-color: white; margin-bottom: 24.6px; position: relative;">
                         <img src="images/like1.png" alt="Like"
-                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 17.24px; height: 17.24px;">
+                            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 17.24px;">
                         <h5 style="color: black; font-size: small; margin-left: 20px; margin-top: 2px;">Testimonial</h5>
                     </div>
 
                     <div
-                        style="height: 53.77px; width: 198px; display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
+                        style="height: 53.77px;  display: flex; flex-direction: column; justify-content: center; align-items: center; ; margin-bottom: 24.6px;">
                         <h4 style="margin: 0; white-space: nowrap;">Lindsey Warren</h4>
                         <h6 style="margin: 5px 0 0 0; font-size: x-small; white-space: nowrap;">Nik of Time Travel,
                             Owner</h6>
                     </div>
 
-                    <div style="height: 313px; width: 230px; word-break: break-all;">
-                        <h2 style="font-size: medium; width: 200px;">" I highly recommend <br><span
+                    <div style="height: 313px;  word-break: break-all;">
+                        <h2 style="font-size: medium;">" I highly recommend <br><span
                                 style="display: inline-block; margin-left: 1ch;">Culture Holidays"</span></h2>
 
 
@@ -756,7 +865,7 @@
                             back!</p>
 
                         <!-- Star Ratings -->
-                        <div style="height: 25%; display: flex; align-items: center; margin-left: 25px;">
+                        <div style="height: 15%; display: flex; align-items: center; margin-left: 25px;">
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
                             <span style="color: #4B70E2; font-size: 24px;">★</span>
@@ -770,7 +879,9 @@
 
             </div>
         </div>
+        </div>
     </section>
+
 </body>
 
 </html>
